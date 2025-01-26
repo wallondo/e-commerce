@@ -1,0 +1,46 @@
+.body_body{
+    border: 1px solid red;
+    flex-basis: 68%;
+    min-width: 500px;
+    min-height: 100px;
+}
+
+.body_body section{
+    width: 100%;
+    display: flex;
+    border: 1px solid blue;
+    height: 300px;
+}
+section .descont{
+    border: 1px solid red;
+    height: 300px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .descont >div{
+    width: 90%;
+    height: 90%;
+    background-color: grey;
+}
+
+section .descont2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid green;
+    flex-grow: 1;
+
+}
+
+section .descont2 >div{
+    border: 1px solid blue;
+    height: 120px;
+    width: 200px;
+    background-color: grey;
+}
+
+
+

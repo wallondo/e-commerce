@@ -1,0 +1,214 @@
+@import url("../../root.css");
+
+.header{
+    background-color: var(--header);
+    height: 100px;
+    width: 100%;
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header > div{
+    display: flex;
+    flex-grow: 1;
+    width: 95%;
+}
+
+/* primeira div */
+
+.header .first_div{
+    margin: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.first_div> div:not(:first-child){
+    min-height: 30px;
+    flex-grow: 1;
+}
+.first_div_icon{
+    min-height: 30px;
+    width: 200px;   
+}
+.first_div_icon span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+.first_div_icon span small{
+    color: white;
+}
+.first_div_icon img{
+    width: 20px;
+
+}
+
+/* lista de promotions */
+
+.promotions{
+    display: flex;
+    align-items: center;
+}
+
+.promotions > ol{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 3px;
+    text-align: center;
+}
+
+/* login  */
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.login span:first-child{
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: 1px solid white;
+}
+
+/* segunda div */
+.header .secund_div{
+    align-items: center;
+    justify-content: space-between;
+}
+.secund_div > div{
+    display: flex;
+    align-items: center;
+}
+.categoris{
+    width: 180px;
+    height: 30px;
+    color: white;
+    font-weight: 500;
+    background-color: var(--orange);
+    border-radius: 2px;
+    border: none;
+}
+.categoris option{
+    background-color:white;
+    color: black;
+}
+
+/* segunda div a do search */
+
+.secund_div .searc_secund_div{
+    height: 50px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    flex-grow: 1;
+}
+.secund_div .searc_secund_div select{
+    border: none;
+    height: 30px;
+}
+.secund_div .searc_secund_div input{
+    border: none;
+    height: 30px;
+    width: 80%;
+    color: grey;
+    padding-left: 5px;
+}
+.search_icon{
+    height: 30px;
+    width: 50px;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_icon img{ 
+    width: 50%;
+    height: 50%;
+}
+
+
+
+/* others_secund_div o último dos três */
+.secund_div .others_secund_div{
+    width: 250px;
+}
+.others_secund_div{
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.others_secund_div span{
+    margin:  3px 3px;
+}
+.up_span{
+    height: 28px;
+    width: 28px;
+}
+.up_span img{
+    width: 100%;
+    height: 100%;
+}
+.hurt{
+    position: relative;
+}
+.hurt img{
+    width: 100%;
+    height: 100%;
+}
+.hurt .count{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: .5px solid black;
+}
+.others_secund_div > span{
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    align-items: end;
+    color: white;
+}
+.others_secund_div > span > span{
+    display: flex;
+    height: 28px;
+    width: 30px;
+    position: relative;
+}
+
+.sacola .count{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: .5px solid black;
+}
