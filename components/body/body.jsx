@@ -5,9 +5,9 @@ import Body_body from "../body_body/body_body";
 
 export default function Body(){
     return(
-        <div className="body">
-            <Sidbar/>
-            <Body_body/>
+        <div className="body body_main">
+                <Sidbar/>
+                <Body_body/>
         </div>
     )
 }
