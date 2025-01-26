@@ -156,6 +156,9 @@ export default function Body_body(){
                 </div>
             </section>
             <section className="sms_update">
+                <span>
+                    GARANTIR AS SMS
+                </span>
                 <div>
                     <h4>Oola carissímo</h4>
                     <h2>Receba as novidades de Primeira</h2>
@@ -167,6 +170,9 @@ export default function Body_body(){
                 </div>
             </section>
             <section className="your_servecis">
+                <span>
+                    MAIS SERVIÇOS
+                </span>
                     <div>
                         <img src="" alt="" />
                         <h4>Entregas gratuitas</h4>

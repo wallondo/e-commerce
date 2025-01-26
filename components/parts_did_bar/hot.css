@@ -1,0 +1,41 @@
+.hot{
+        min-height: 600px;
+        width: 100%;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.hot1{
+    border: 1px solid black;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hot1 > *{
+    text-align: center;
+    margin-top: 20px;
+}
+.hot1 > button{
+    width: 140px;
+    height: 30px;
+    background-color: var(--orange);
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

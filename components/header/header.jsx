@@ -44,7 +44,7 @@ export default function Header(){
             <div className="secund_div">
                 <div>
                     <select name="" id="" className="categoris">
-                        <option value="null">Todas categorias</option>
+                        <option value="null">Categorias</option>
                         <option value="casa">Casa/copartimentos</option>
                         <option value="escritorio">Escritório/salas</option>
                         <option value="ginasio">Ginásio/parques</option>
@@ -56,6 +56,8 @@ export default function Header(){
                         <option value="casa">Casa/copartimentos</option>
                         <option value="escritorio">Escritório/salas</option>
                         <option value="ginasio">Ginásio/parques</option>
+                        <option value="ginasio">Quartos/Suits</option>
+                        <option value="ginasio">Cozinhas/diversas</option>
                     </select>
                     <input type="text" placeholder="Pesquisar Produto : " />
                     <div className="search_icon">
