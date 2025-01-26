@@ -115,10 +115,89 @@ export default function Body_body(){
                     </ol>
                 </div>
                 <div className="list_itens">
-
+                        <ol>
+                            <li>
+                                <div className="img_product"></div>
+                                <h4><span>234.000</span>.00kz</h4>
+                                <p>lobas doddkdd</p>
+                                <small>5 5 5 5 5 5</small>
+                            </li>
+                            <li>
+                                <div className="img_product"></div>
+                                <h4><span>234.000</span>.00kz</h4>
+                                <p>lobas doddkdd</p>
+                                <small>5 5 5 5 5 5</small>
+                            </li>
+                            <li>
+                                <div className="img_product"></div>
+                                <h4><span>234.000</span>.00kz</h4>
+                                <p>lobas doddkdd</p>
+                                <small>5 5 5 5 5 5</small>
+                            </li>
+                            <li>
+                                <div className="img_product"></div>
+                                <h4><span>234.000</span>.00kz</h4>
+                                <p>lobas doddkdd</p>
+                                <small>5 5 5 5 5 5</small>
+                            </li>
+                            <li>
+                                <div className="img_product"></div>
+                                <h4><span>234.000</span>.00kz</h4>
+                                <p>lobas doddkdd</p>
+                                <small>5 5 5 5 5 5</small>
+                            </li>
+                            <li>
+                                <div className="img_product"></div>
+                                <h4><span>234.000</span>.00kz</h4>
+                                <p>lobas doddkdd</p>
+                                <small>5 5 5 5 5 5</small>
+                            </li>
+                        </ol>
                 </div>
             </section>
-            
+            <section className="sms_update">
+                <div>
+                    <h4>Oola carissímo</h4>
+                    <h2>Receba as novidades de Primeira</h2>
+                    <span>
+                        <input type="number" placeholder="Seu whatzap : " />
+                        <button>Enviar</button>
+                    </span>
+                    <small>Meu portifólio : <NavLink>Quinguri</NavLink></small>
+                </div>
+            </section>
+            <section className="your_servecis">
+                    <div>
+                        <img src="" alt="" />
+                        <h4>Entregas gratuitas</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                        <h4>Entregas gratuitas</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                        <h4>Entregas gratuitas</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                        <h4>Entregas gratuitas</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                        <h4>Entregas gratuitas</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                    </div>
+                    <div>
+                        <img src="" alt="" />
+                        <h4>Entregas gratuitas</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                    </div>
+            </section>
         </div>
     )
 }

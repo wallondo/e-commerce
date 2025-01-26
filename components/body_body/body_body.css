@@ -271,7 +271,7 @@ section .descont2 >div{
 
 
 .itens_to_salls{
-    height: 300px;
+    min-height: 300px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -305,9 +305,132 @@ section .descont2 >div{
 
 .list_itens{
         border: 1px solid rebeccapurple;
-        height: 300px;
+        min-height: 400px;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
+.list_itens ol{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    min-height: 90%;
+    border: 1px solid red;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+.list_itens ol li{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;   
+    margin: 5px 0px; 
+}
+
+.list_itens ol li .img_product{
+    border: 1px solid black;
+    height: 130px;
+    width: 140px;
+}
+.list_itens ol li span{
+    color: red;
+}
+.list_itens ol li >*{
+    font-weight: 700;
+}
+
+
+/* sms_update */
+
+.sms_update{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid black;
+    background-color: var(--grey);
+    margin: 30px 0px 20px 0px;
+}
+
+.sms_update > div{
+    height: 60%;
+    width: 350px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    margin-left: 25px;
+
+
+}
+.sms_update > div span{
+    display: flex;
+
+}
+
+.sms_update > div span input{
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    color: black;
+    padding-left: 5px;
+    
+}
+.sms_update > div span button{
+    width: 100px;
+    height: 30px;
+    background-color: var(--header);
+    color: white;
+    font-weight: 700;
+    margin: 0px 5px;
+    cursor: pointer;
+    
+}
+.sms_update small{
+    font-weight: 700;
+}
+
+/* your_servecis */
+
+.your_servecis {
+    min-height: 300px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 30px 0px 50px 0px;
+}
+.your_servecis >  div{
+    background-color: var(--grey);
+    min-height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px 0px;
+}
+.your_servecis >  div img{
+    width: 30px;
+    height: 30px;
+}
+.your_servecis >  div h4{
+    margin: 5px 0px;
+}
+.your_servecis >  div p{
+    text-align: center;
+}
+
 
 
 

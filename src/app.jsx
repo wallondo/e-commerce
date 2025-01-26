@@ -2,6 +2,7 @@ import React from "react";
 import "./app.css";
 import Header from "../components/header/header";
 import Body from "../components/body/body";
+import Footer from "../components/footer/footer";
 
 export default function App(){
     return(
@@ -25,6 +26,7 @@ export default function App(){
             </div>
             <Header/>
             <Body/>
+            <Footer/>
         </div>
     )
 }
