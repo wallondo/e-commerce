@@ -2,6 +2,12 @@
     flex-basis: 20%;
     min-width: 200px;
     border: 1px solid black;
-    height: 100px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 
 }

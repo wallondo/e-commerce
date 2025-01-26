@@ -15,7 +15,7 @@
 }
 section .descont{
     height: 300px;
-    width: 400px;
+    width: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@ section .descont2{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid green;
+    border: 3px solid green;
     flex-grow: 1;
 
 }
