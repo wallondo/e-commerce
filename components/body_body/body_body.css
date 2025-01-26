@@ -25,7 +25,27 @@ section .descont >div{
     width: 95%;
     height: 90%;
     min-width: 360px;
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+section .descont >div button{
+    width: 140px;
+    height: 30px;
+    background-color: var(--orange);
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+section .descont >div h2{
+    color: rgba(85, 44, 44, 0.678);
+}
+section .descont >div h2 span{
+    color: rgba(235, 66, 66, 0.726);
 }
 
 section .descont2{
@@ -40,9 +60,25 @@ section .descont2{
 
 section .descont2 >div{
     height: 120px;
-    width: 220px;
-    width: 90%;
+    width: 200px;
     background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+section .descont2 >div h4{
+    text-align: center;
+    color: rgba(128, 128, 128, 0.753);
+}
+section .descont2 >div button{
+    width: 120px;
+    height: 30px;
+    background-color: rgba(197, 60, 6, 0.678);
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 /* line */

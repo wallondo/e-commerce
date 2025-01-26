@@ -7,11 +7,23 @@ export default function Body_body(){
         <div className="body_body">
             <section className="first_sec">
                 <div className="descont">
-                    <div>ola</div>
+                    <div>
+                        <h2>MAIS DE <span> 30% </span> DE DESCONTO NA COMPRA</h2>
+                            <button>ver agora</button>
+                        <h2>MAIS DE <span> 50% </span> DE DESCONTO NA ENTREGA</h2>
+                    </div>
                 </div>
                 <div className="descont2">
-                        <div></div>
-                        <div></div>
+                        <div>
+                            <h4>MAIS DE <span> 30% </span> DE DESCONTO NA COMPRA</h4>
+                                <button>ver agora</button>
+                            <h4>MAIS DE <span> 50% </span> DE DESCONTO NA ENTREGA</h4>
+                        </div>
+                        <div>
+                            <h4>MAIS DE <span> 30% </span> DE DESCONTO NA COMPRA</h4>
+                                <button>ver agora</button>
+                            <h4>MAIS DE <span> 50% </span> DE DESCONTO NA ENTREGA</h4>
+                        </div>
                 </div>
             </section>
             <div className="line">
