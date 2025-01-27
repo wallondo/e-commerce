@@ -1,0 +1,53 @@
+/* .first_div a{
+    transition: border-width 0.3s ease;
+    border: none;
+} */
+.first_div  a:hover{
+    border-bottom: 2px solid white;
+    color: grey;
+  
+}
+a:active{
+    color: black;
+    
+}
+select{
+    cursor: pointer;
+}
+select:active{
+    color: black ;
+}
+
+.searc_secund_div select:active{
+    color: white ;
+}
+.up select:active{
+    color: black ;
+}
+
+.body_main button:hover{
+    color: black !important;
+    outline: 0.5px solid white;
+
+}
+.body_main button:active{
+    color: white !important;
+    outline: 0.5px solid red;   
+}
+
+/* .elemento::after {
+    content: ''; Necessário para gerar o pseudo-elemento
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .elemento:hover::after {
+    border-width: 5px; Aumenta a borda ao passar o mouse
+    border-color: #000; Define a cor da borda ao passar o mouse
+  } */
+  
