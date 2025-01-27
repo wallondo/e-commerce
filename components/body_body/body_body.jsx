@@ -209,33 +209,33 @@ export default function Body_body(){
                 </span>
                     <div>
                         <img src="/img/car1.png" alt="" />
-                        <h4>Entregas gratuitas</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                        <h4><Translate pt="Entregas gratuitas" en="Free delivery"/></h4>
+                        <p><Translate pt="Entregamos em toda parte de Angola" en="We deliver all over Angola"/></p>
                     </div>
                     <div>
                         <img src="/img/web.jpg" alt="" />
-                        <h4>Construção de Web Sites</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                        <h4><Translate pt="Construção de Web Sites" en="Website Development"/></h4>
+                        <p><Translate pt={"Desde pequenos porte até grande porte"} en={"From small to large scale"}/></p>
                     </div>
                     <div>
                         <img src="/img/cons.jpg" alt="" />
-                        <h4>Comsultórias</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                        <h4><Translate pt={"Consultorias"} en={"Consultancies"}/></h4>
+                        <p><Translate pt={"Faça a sua empresa crescer da melhor forma, sob orientação"} en={"Make your business grow in the best way, under guidance."}/></p>
                     </div>
                     <div>
                         <img src="/img/mart.jpg" alt="" />
-                        <h4>Markinting Digital</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                        <h4><Translate pt={"Marketing Digital"} en={"Digital Marketing"}/></h4>
+                        <p><Translate pt={"Eleve o seu grau de vendas em quantidade e qualidade"} en={"Increase your sales in both quantity and quality"}/></p>
                     </div>
                     <div>
                         <img src="/img/web1.jpg" alt="" />
-                        <h4>Formação de Dev.Web</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                        <h4><Translate pt={"Formação de Dev.Web"} en={"Web Developer Training"}/></h4>
+                        <p><Translate pt={"Comece a desenvolver sites, sistemas e muito mais"} en={"Start developing websites, systems, and much more"}/></p>
                     </div>
                     <div>
                         <img src="/img/for.jpg" alt="" />
-                        <h4>Formação de Markiting</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur!</p>
+                        <h4><Translate pt={"Formação de Marketing"} en={"Marketing Training"}/></h4>
+                        <p><Translate pt={"Saiba como o mercado digital funciona e comece a usar a teu favor"} en={"Learn how the digital market works and start using it to your advantage"}/></p>
                     </div>
             </section>
         </div>
