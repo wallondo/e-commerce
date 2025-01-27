@@ -1,25 +1,32 @@
 .hot{
         min-height: 600px;
         width: 100%;
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
         align-items: center;
 }
 
 .hot1{
-    border: 1px solid black;
+    border: 2px solid rgba(128, 128, 128, 0.568);
     height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
 .hot1 > *{
     text-align: center;
     margin-top: 20px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 .hot1 > button{
     width: 140px;
@@ -31,8 +38,18 @@
     cursor: pointer;
 }
 
-
-
+.hot11{
+    background-image: url("../../public/img/canais.jpg");
+}
+.hot12{
+    background-image: url("../../public/img/lojaon.jpg");
+}
+.hot13{
+    background-image: url("../../public/img/divulga.jpg");
+}
+.hot14{
+    background-image: url("../../public/img/equipa.jpg");
+}
 
 
 

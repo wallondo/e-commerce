@@ -1,7 +1,6 @@
 .sidbar{
     flex-basis: 20%;
     min-width: 200px;
-    border: 1px solid black;
     min-height: 1500px;
 
     display: flex;

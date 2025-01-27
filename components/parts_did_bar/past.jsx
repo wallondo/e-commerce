@@ -5,11 +5,11 @@ import "./past.css";
 export default function Past_Product(){
     return(
         <div className="past">
-           <h4>PRODUTOS PASSADOS</h4>
+           <h4 style={{color:"red"}}>PRODUTOS PASSADOS</h4>
            <ol>
                 <li>
                     <div>
-                        <img src="/img/produto.png" alt="" />
+                        <img src="/img/seca1.jpg" alt="" />
                     </div>
                     <div>
                         <h4>Secador de cabelo</h4>
@@ -19,7 +19,7 @@ export default function Past_Product(){
                 </li>
                 <li>
                     <div>
-                        <img src="/img/produto.png" alt="" />
+                        <img src="/img/seca2.jpg" alt="" />
                     </div>
                     <div>
                         <h4>Secador de cabelo</h4>
@@ -29,7 +29,7 @@ export default function Past_Product(){
                 </li>
                 <li>
                     <div>
-                        <img src="/img/produto.png" alt="" />
+                        <img src="/img/seca3.jpg" alt="" />
                     </div>
                     <div>
                         <h4>Secador de cabelo</h4>
