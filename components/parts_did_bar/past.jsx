@@ -1,11 +1,13 @@
 import React from "react";
 import "./past.css";
-
+import Translate from "../../src/translate";
 
 export default function Past_Product(){
+
+
     return(
         <div className="past">
-           <h4 style={{color:"red"}}>PRODUTOS PASSADOS</h4>
+           <h4 style={{color:"red"}}><Translate pt={"PRODUTOS PASSADOS"} en={"PAST PRODUCTS"}/></h4>
            <ol>
                 <li>
                     <div>
