@@ -4,3 +4,23 @@ com esses tres tópicos as outras categórias vão trabalha visando tal dos tres
 casa=>sala,quarto,cozinha...
 escritorio=>...,...,...,...
 academia=>atletismo,natação,corrida...
+
+
+
+
+
+Links de sites
+
+https://wallondo.vercel.app/
+https://db-black.vercel.app/
+https://dashaboard.vercel.app/
+https://portifolio-eight-ecru-56.vercel.app/
+https://market-sooty-tau.vercel.app/
+
+
+https://books-chi-smoky.vercel.app/
+https://api-gmail.vercel.app/
+https://sms-gmail-api.vercel.app/
+https://wallondo.github.io/bebidas/
+
+

@@ -1,28 +1,34 @@
 import React from "react";
 import "./body_body.css";
 import { NavLink } from "react-router-dom";
+import Translate from "../../src/translate";
 
 export default function Body_body(){
+
+
+
     return(
         <div className="body_body">
             <section className="first_sec">
                 <div className="descont">
                     <div>
-                        <h2>MAIS DE <span> 30% </span> DE DESCONTO NA COMPRA</h2>
-                            <button>ver agora</button>
-                        <h2>MAIS DE <span> 50% </span> DE DESCONTO NA ENTREGA</h2>
+                        <h2> <Translate pt="MAIS DE" en="MORE THAN"/>  <span> 30% </span> <Translate pt="DE DESCONTO NA COMPRA" en="DISCOUNT ON THE PURCHASE"/></h2>
+                            <button> <Translate pt="Ver aogora" en="See now" /> </button>
+                        <h2><Translate pt="MAIS DE" en="MORE THAN"/> <span> 50% </span><Translate en="DISCOUNT ON DELIVERY" pt="DE DESCONTO NA ENTREGA" /></h2>
                     </div>
                 </div>
                 <div className="descont2">
                         <div className="div_1_descont2">
-                            <h4>MAIS DE <span> 30% </span> DE DESCONTO NA COMPRA</h4>
-                                <button>ver agora</button>
-                            <h4>MAIS DE <span> 50% </span> DE DESCONTO NA ENTREGA</h4>
+                        <h4> <Translate pt="MAIS DE" en="MORE THAN"/>  <span> 15% </span> <Translate pt="DE DESCONTO NA COMPRA" en="DISCOUNT ON THE PURCHASE"/></h4>
+                            <button> <Translate pt="Ver aogora" en="See now" /> </button>
+                        <h4><Translate pt="MAIS DE" en="MORE THAN"/> <span> 25% </span><Translate en="DISCOUNT ON DELIVERY" pt="DE DESCONTO NA ENTREGA" /></h4>
+                   
                         </div>
                         <div className="div_2_descont2">
-                            <h4>MAIS DE <span> 30% </span> DE DESCONTO NA COMPRA</h4>
-                                <button>ver agora</button>
-                            <h4>MAIS DE <span> 50% </span> DE DESCONTO NA ENTREGA</h4>
+                        <h4> <Translate pt="MAIS DE" en="MORE THAN"/>  <span> 15% </span> <Translate pt="DE DESCONTO NA COMPRA" en="DISCOUNT ON THE PURCHASE"/></h4>
+                            <button> <Translate pt="Ver aogora" en="See now" /> </button>
+                        <h4><Translate pt="MAIS DE" en="MORE THAN"/> <span> 25% </span><Translate en="DISCOUNT ON DELIVERY" pt="DE DESCONTO NA ENTREGA" /></h4>
+                   
                         </div>
                 </div>
             </section>
@@ -30,16 +36,16 @@ export default function Body_body(){
                 <div className="offer">
                     <img src="/img/pre1.png" alt="" />
                     <p>
-                    OFER especial
+                        <Translate en="SPECIAL OFFER" pt="OFERTA ESPECIAL" />
                     </p>
                 </div>
                 <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <button>Get see now</button>
+                    <p><Translate pt="Na construção de um website, você recebe o domínio gratuitamente!" en="In the construction of a website, do you get the domain for free"/></p>
+                    <button><Translate pt="Ver agora" en="See now"/></button>
                 </div>
             </div>
             <section className="most_buy">
-                    <div><h3>Mais compradas</h3></div>
+                    <div><h3><Translate pt="Mais compradas" en="Most purchased"/></h3></div>
                     <div className="most_buyder">
                             <div className="img_desc">
                                 <div className="img">
@@ -113,21 +119,21 @@ export default function Body_body(){
                                 <span>33% <br /> OFF</span>
                             </div>
                             <div>
-                                <h3>Lorem ipsum dolor sit amet, consectetur!</h3>
-                                <h5>Lorem ipsum dolor sit amet, consectetur!</h5>
-                                <button>Ver agora</button>
+                                <h3><Translate pt="Os melhores desktops gamers para ti!" en="The best gaming desktops for you!"/></h3>
+                                <h5><Translate pt="Os melhores laptops para os designers" en="The best laptops for designers"/></h5>
+                                <button><Translate pt="Ver agora" en="See now" /></button>
                             </div>
                     </div>
             </section>
             <section className="itens_to_salls">
                 <div>
-                    <div className="itens_exercicios"><h3>Mais compradas</h3></div>
+                    <div className="itens_exercicios"><h3><Translate pt="Mais compradas" en="Most purchased"/></h3></div>
                     <ol>
-                        <li><NavLink>Pesos</NavLink></li>
-                        <li><NavLink>Corridas</NavLink></li>
-                        <li><NavLink>Natação</NavLink></li>
-                        <li><NavLink>Cicletismo</NavLink></li>
-                        <li><NavLink>Footebol</NavLink></li>
+                        <li><NavLink> <Translate pt="Pesos" en="Weights"/></NavLink></li>
+                        <li><NavLink> <Translate pt="Corridas" en="Running"/></NavLink></li>
+                        <li><NavLink> <Translate pt="Natação" en="Swimming"/></NavLink></li>
+                        <li><NavLink> <Translate pt="Ciclismo" en="Cycling"/></NavLink></li>
+                        <li><NavLink> <Translate pt="Futebol" en="Soccer"/></NavLink></li>
                     </ol>
                 </div>
                 <div className="list_itens">
@@ -185,21 +191,21 @@ export default function Body_body(){
             </section>
             <section className="sms_update">
                 <span>
-                    GARANTIR AS SMS
+                    <Translate pt="GARANTIR AS SMS" en="ENSURE THE SMS"/>
                 </span>
                 <div>
-                    <h4>Oola carissímo</h4>
-                    <h2>Receba as novidades de Primeira</h2>
+                    <h4><Translate pt="Olá caríssimo" en="Hello, dear"/></h4>
+                    <h2><Translate pt="Receba as novidades de primeira" en="Receive the latest updates first"/></h2>
                     <span>
                         <input type="number" placeholder="Seu whatzap : " />
-                        <button>Enviar</button>
+                        <button><Translate pt="Send" en="Enviar"/></button>
                     </span>
-                    <small>Entrar em comtacto : <NavLink>Quinguri</NavLink></small>
+                    <small><Translate pt="Entrar em contacto" en="Get in touch"/> <NavLink>Quinguri</NavLink></small>
                 </div>
             </section>
             <section className="your_servecis">
                 <span>
-                    MAIS SERVIÇOS
+                   <Translate pt={"MAIS SERVIÇOS"} en={"MORE SERVICES"}/>
                 </span>
                     <div>
                         <img src="/img/car1.png" alt="" />

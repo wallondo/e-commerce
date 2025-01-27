@@ -44,8 +44,8 @@ section .descont >div button{
     cursor: pointer;
 }
 section .descont >div h2{
-    color: rgba(88, 5, 5, 0.795);
-    text-shadow: 1px -2px 5px white;
+    color: rgba(238, 15, 15, 0.795);
+    text-shadow: 1px 2px 3px black;
 }
 section .descont >div h2 span{
     color: rgba(235, 66, 66, 0.726);
@@ -85,7 +85,9 @@ section .descont2 >div{
 }
 section .descont2 >div h4{
     text-align: center;
-    color: rgba(39, 37, 37, 0.753);
+    font-size: 13px;
+    color: rgba(255, 4, 4, 0.884);
+    text-shadow: 1px 1px 2px black;
 }
 section .descont2 >div button{
     width: 120px;
