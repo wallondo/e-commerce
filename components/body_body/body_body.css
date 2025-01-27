@@ -1,6 +1,5 @@
 @import url("../../root.css");
 .body_body{
-    border: 1px solid red;
     flex-basis: 78%;
     min-width: 500px;
     min-height: 800px;
@@ -19,13 +18,16 @@ section .descont{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+
+    background-image: url("../../public/img/f2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 section .descont >div{
     width: 95%;
     height: 90%;
     min-width: 360px;
-    background-color: rgb(255, 255, 255);
     position: relative;
     display: flex;
     align-items: center;
@@ -42,7 +44,8 @@ section .descont >div button{
     cursor: pointer;
 }
 section .descont >div h2{
-    color: rgba(85, 44, 44, 0.678);
+    color: rgba(88, 5, 5, 0.795);
+    text-shadow: 1px -2px 5px white;
 }
 section .descont >div h2 span{
     color: rgba(235, 66, 66, 0.726);
@@ -53,23 +56,36 @@ section .descont2{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 3px solid green;
     flex-grow: 1;
 
 }
 
+.descont2 .div_1_descont2{
+    background-image: url("../../public/img/al1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.descont2 .div_2_descont2{
+    background-image: url("../../public/img/al2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 section .descont2 >div{
+    border: 2px solid rgba(128, 128, 128, 0.466);
     height: 120px;
     width: 200px;
-    background-color: skyblue;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-radius: 5px;
 }
 section .descont2 >div h4{
     text-align: center;
-    color: rgba(128, 128, 128, 0.753);
+    color: rgba(39, 37, 37, 0.753);
 }
 section .descont2 >div button{
     width: 120px;
@@ -132,7 +148,6 @@ section .descont2 >div button{
 /* most_buy */
 
 .most_buy{
-    border: 1px solid black;
     min-height: 400px;
     width: 100%;
     padding: 20px 0px;
@@ -142,7 +157,6 @@ section .descont2 >div button{
 }
 
 .most_buy > div:first-child{
-    border: 1px solid green;
     height: 35px;
     width: 150px;
     display: flex;
@@ -153,7 +167,6 @@ section .descont2 >div button{
 }
 
 .most_buyder{
-    border: 1px solid red;
     width: 100%;
     display: flex;
     align-items: center;
@@ -162,7 +175,6 @@ section .descont2 >div button{
 }
 .most_buyder .img_desc{
     flex-grow: 1;
-    border: 1px solid blue;
     height: 100%;
     display: flex;
     align-items: center;
@@ -170,14 +182,16 @@ section .descont2 >div button{
 }
 
 .most_buyder > div .img{
-    border: 1px solid black;
     height: 180px;
     width: 170px;
     background-color: var(--grey);
     margin: 0px 5px;
 }
+.most_buyder > div .img img{
+    width: 100%;
+    height: 100%;
+}
 .desc{
-    border: 1px solid black;
     height: 180px;
     width: 200px;
     display: flex;
@@ -187,7 +201,6 @@ section .descont2 >div button{
 }
 
 .first_div_avoluantion{
-    border: 1px solid red;
     width: 90%;
 }
 .first_div_avoluantion h4{
@@ -213,7 +226,6 @@ section .descont2 >div button{
 }
 
 .numbers{
-    border: 1px solid black;
     height: 50px;
     width: 100%;
     display: flex;
@@ -225,14 +237,12 @@ section .descont2 >div button{
     display: flex;
     width: 60px;
     height: 48px;
-    border: 1px solid black;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
 .numbers span p:first-child{
-    border: 1px solid black;
     height: 25px;
     width: 25px;
     border-radius: 100%;
@@ -255,7 +265,10 @@ section .descont2 >div button{
 .offer_2{
     width: 100%;
     height: 150px;
-    background-color: var(--grey);
+    background-image: url("../../public/img/comp.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
     margin: 20px 0px;
 
     display: flex;
@@ -267,7 +280,6 @@ section .descont2 >div button{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
 }
 .offer_2 div:first-child span{
     height: 80px;
@@ -282,7 +294,6 @@ section .descont2 >div button{
     background-color: white;
 }
 .offer_2 div:last-child{
-    border: 1px solid red;
    flex-grow: 1;
    display: flex;
    align-items: center;
@@ -292,6 +303,8 @@ section .descont2 >div button{
 }
 .offer_2 div:last-child > *{
     margin-top: 5px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
 }
 .offer_2 div:last-child button{
     width: 140px;
@@ -311,7 +324,6 @@ section .descont2 >div button{
     width: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
 }
 .itens_to_salls > div:first-child{
     width: 100%;
@@ -321,7 +333,6 @@ section .descont2 >div button{
     height: 40px;
 }
 .itens_to_salls .itens_exercicios{
-    border: 1px solid green;
     height: 35px;
     width: 150px;
     display: flex;
@@ -340,7 +351,6 @@ section .descont2 >div button{
 }
 
 .list_itens{
-        border: 1px solid rebeccapurple;
         min-height: 400px;
         width: 100%;
         display: flex;
@@ -352,12 +362,10 @@ section .descont2 >div button{
     flex-wrap: wrap;
     flex-grow: 1;
     min-height: 90%;
-    border: 1px solid red;
     justify-content: space-around;
     padding: 10px 0px;
 }
 .list_itens ol li{
-    border: 1px solid black;
     height: 200px;
     width: 200px;
     display: flex;
@@ -368,9 +376,12 @@ section .descont2 >div button{
 }
 
 .list_itens ol li .img_product{
-    border: 1px solid black;
     height: 130px;
     width: 140px;
+}
+.list_itens ol li .img_product img{
+    width: 100%;
+    height: 100%;
 }
 .list_itens ol li span{
     color: red;
@@ -388,15 +399,17 @@ section .descont2 >div button{
     display: flex;
     align-items: start;
     justify-content: center;
-    border: 1px solid black;
-    background-color: var(--grey);
+    
     margin: 60px 0px 20px 0px;
     flex-direction: column;
     position: relative;
+    background-image: url("../../public/img/sms_product.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
 
 }
 .sms_update span:first-child{
-    border: 1px solid green;
     height: 35px;
     width: 150px;
     display: flex;
@@ -411,7 +424,6 @@ section .descont2 >div button{
 .sms_update > div{
     height: 60%;
     width: 350px;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -428,12 +440,16 @@ section .descont2 >div button{
 .sms_update > div span input{
     width: 200px;
     height: 30px;
-    background-color: white;
+    background-color: grey;
+
     border: none;
     border-radius: 3px;
-    color: black;
+    color: white;
     padding-left: 5px;
     
+}
+.sms_update > div span input::placeholder{
+    color: white;
 }
 .sms_update > div span button{
     width: 100px;
@@ -448,7 +464,10 @@ section .descont2 >div button{
 .sms_update small{
     font-weight: 700;
 }
-
+.sms_update > div small a{
+    color: darkblue;
+    text-decoration: underline;
+}
 /* your_servecis */
 
 .your_servecis {
@@ -461,10 +480,8 @@ section .descont2 >div button{
     align-items: center;
     margin: 60px 0px 50px 0px;
     position: relative;
-    border: 1px solid black;
 }
 .your_servecis > span{
-    border: 1px solid green;
     height: 35px;
     width: 150px;
     display: flex;
@@ -477,7 +494,7 @@ section .descont2 >div button{
     left: -1px;
 }
 .your_servecis >  div{
-    background-color: var(--grey);
+    background-color: white;
     min-height: 100px;
     width: 200px;
     display: flex;
@@ -487,8 +504,8 @@ section .descont2 >div button{
     padding: 4px 0px;
 }
 .your_servecis >  div img{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 40px;
 }
 .your_servecis >  div h4{
     margin: 5px 0px;

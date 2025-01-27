@@ -62,7 +62,6 @@
 }
 
 .mov_imoveis{
-    border: 1px solid red;
     width: 100%;
     height: 100px;
 
@@ -75,25 +74,46 @@
 
 .mov1{
     display: flex;
-    border: 1px solid blue;
     width: 100%;
     height: 100%;
 
     position: absolute;
     left: -110%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     transition: all 3s;
 }
-
+.mov1 > div{
+    height: 90%;
+    width: 100px;
+}
+.mov1 > div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
 .mov2{
     display: flex;
-    border: 1px solid green;
     width: 100%;
     height: 100%;
     transition: all 3s;    
     position: absolute;
     right: -110%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-
+.mov2 > div{
+    height: 90%;
+    width: 100px;
+}
+.mov2 > div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
 .mov{
     left: 0% !important;
 }
@@ -105,7 +125,6 @@
 
 
 .information_place{
-    border: 1px solid red;
     width: 100%;
     height: 100%;
     display: flex;
@@ -117,7 +136,6 @@
     height: 100%;
     min-height: 200px;
     width: 300px;
-    border: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: center;

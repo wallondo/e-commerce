@@ -23,8 +23,24 @@ export default function Footer(){
                 <span></span>
               
                 <div className="mov_imoveis">
-                        <div className="mov1 mov" id="mov1"></div>
-                        <div className="mov2" id="mov2"></div>
+                        <div className="mov1 mov" id="mov1">
+                            <div><img src="/img/loja1.jpg" alt="" /></div>
+                            <div><img src="/img/loja2.jpg" alt="" /></div>
+                            <div><img src="/img/loja3.jpg" alt="" /></div>
+                            <div><img src="/img/loja4.jpg" alt="" /></div>
+                            <div><img src="/img/loja5.jpg" alt="" /></div>
+                            <div><img src="/img/loja6.jpg" alt="" /></div>
+                            <div><img src="/img/loja7.jpg" alt="" /></div>
+                        </div>
+                        <div className="mov2" id="mov2">
+                            <div><img src="/img/ele1.jpg" alt="" /></div>
+                            <div><img src="/img/ele2.jpg" alt="" /></div>
+                            <div><img src="/img/ele3.jpg" alt="" /></div>
+                            <div><img src="/img/ele4.jpg" alt="" /></div>
+                            <div><img src="/img/ele5.jpg" alt="" /></div>
+                            <div><img src="/img/ele6.jpg" alt="" /></div>
+                            <div><img src="/img/ele7.jpg" alt="" /></div>
+                        </div>
                 </div>
                 <div className="information_place">
                         <article>
