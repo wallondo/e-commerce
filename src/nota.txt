@@ -38,3 +38,8 @@ https://wallondo.github.io/bebidas/
     img:"/img/sof1.jpg"
 }
 
+TPC tentar fazr link interno com NAvLInk ou LINK , no router 
+                                                            <LINK to="#interno"/>
+                                                            <route>
+                                                                <route to="#interno">  
+                                                            </route> // algo assim

@@ -29,7 +29,7 @@ export default function Routas(){
 
                     </Route>
                     <Route path="/offecer" element={<Oferta/>}/>
-                    <Route path="/buy" element={<Compra/>}/>
+                    <Route path="/buy/:id" element={<Compra/>}/>
                 </Routes>
             </BrowserRouter>
         </Dados.Provider>

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./header.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Dados } from "../../src/dados";
 import Translate from "../../src/translate";
 
@@ -16,10 +16,12 @@ export default function Header(){
         <div className="header">
             <div className="first_div">
                 <div className="first_div_icon">
-                    <span>
-                        <img src="/img/sacola.png" alt="" />
-                        <small> {lang=="pt"?"Seu mercado online":"Your online marketplace"}</small>
-                    </span>
+                    <Link to={"/"}>
+                        <span>
+                            <img src="/img/sacola.png" alt="" />
+                            <small> {lang=="pt"?"Seu mercado online":"Your online marketplace"}</small>
+                        </span>
+                    </Link>
                 </div>
                 <div className="promotions">
                     <ol>
@@ -27,20 +29,9 @@ export default function Header(){
                             <Translate pt="Outras promoções" en="Other promotions"/>  
                         </li>
                         <li>
-                            <a href="#list_itens" onClick={()=>{produto("pesos")}}><Translate pt="Pesos" en="Weights"/></a>
+                            <a href="buy/98234u893473894378nhjdfhgjdfghjddhg" onClick={()=>{produto("pesos")}}><Translate pt="Produtos" en="Products"/></a>
                         </li>
-                        <li>
-                            <a href="#list_itens" onClick={()=>{produto("almofadas")}}><Translate pt="Almofadas" en="Cushions"/></a>
-                        </li>
-                        <li>
-                            <a href="#list_itens" onClick={()=>{produto("secretárias")}}><Translate pt="Secretárias" en="Desks"/></a>
-                        </li>
-                        <li>
-                            <a href="#list_itens" onClick={()=>{produto("lençóis")}}><Translate pt="Lençóis" en="Sheets"/></a>
-                        </li>
-                        <li>
-                            <a href="#list_itens" onClick={()=>{produto("banheiros")}}><Translate pt="Banheiros" en="Bathrooms"/></a>
-                        </li>
+                      
                     </ol>
                 </div>
                 <div className="login">

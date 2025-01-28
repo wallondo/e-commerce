@@ -366,6 +366,27 @@ section .descont2 >div button{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+}
+.go_back{
+    width: 210px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.go_back button{
+    width: 100px;
+    height: 30px;
+    background-color: var(--orange);
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.go_back button img{
+    width: 15px;
+    height: 20px;
 }
 .list_itens ol{
     display: flex;
