@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./body_body.css";
 import { NavLink } from "react-router-dom";
 import Translate from "../../src/translate";
 
 export default function Body_body(){
-
-
+    const sms_ref = useRef(null)
+      function sms(params){
+        if(!sms_ref.current.value==""){
+            alert(sms_ref.current.value)
+            sms_ref.current.value=""
+        }
+      }
+    function produto(params) {
+       
+    }
 
     return(
         <div className="body_body">
@@ -13,7 +21,7 @@ export default function Body_body(){
                 <div className="descont">
                     <div>
                         <h2> <Translate pt="MAIS DE" en="MORE THAN"/>  <span> 30% </span> <Translate pt="DE DESCONTO NA COMPRA" en="DISCOUNT ON THE PURCHASE"/></h2>
-                            <button> <Translate pt="Ver aogora" en="See now" /> </button>
+                            <button><Translate pt="Ver aogora" en="See now" /> </button>
                         <h2><Translate pt="MAIS DE" en="MORE THAN"/> <span> 50% </span><Translate en="DISCOUNT ON DELIVERY" pt="DE DESCONTO NA ENTREGA" /></h2>
                     </div>
                 </div>
@@ -26,7 +34,7 @@ export default function Body_body(){
                         </div>
                         <div className="div_2_descont2">
                         <h4> <Translate pt="MAIS DE" en="MORE THAN"/>  <span> 15% </span> <Translate pt="DE DESCONTO NA COMPRA" en="DISCOUNT ON THE PURCHASE"/></h4>
-                            <button> <Translate pt="Ver aogora" en="See now" /> </button>
+                            <button><Translate pt="Ver aogora" en="See now" /> </button>
                         <h4><Translate pt="MAIS DE" en="MORE THAN"/> <span> 25% </span><Translate en="DISCOUNT ON DELIVERY" pt="DE DESCONTO NA ENTREGA" /></h4>
                    
                         </div>
@@ -129,15 +137,15 @@ export default function Body_body(){
                 <div>
                     <div className="itens_exercicios"><h3><Translate pt="Mais compradas" en="Most purchased"/></h3></div>
                     <ol>
-                        <li><NavLink> <Translate pt="Pesos" en="Weights"/></NavLink></li>
-                        <li><NavLink> <Translate pt="Corridas" en="Running"/></NavLink></li>
-                        <li><NavLink> <Translate pt="Natação" en="Swimming"/></NavLink></li>
-                        <li><NavLink> <Translate pt="Ciclismo" en="Cycling"/></NavLink></li>
-                        <li><NavLink> <Translate pt="Futebol" en="Soccer"/></NavLink></li>
+                        <li><a href="#pesos" onClick={()=>{produto("#pesos")}}> <Translate pt="Pesos" en="Weights"/></a></li>
+                        <li><a href="#corridas" onClick={()=>{produto("#corridas")}}> <Translate pt="Corridas" en="Running"/></a></li>
+                        <li><a href="#natação" onClick={()=>{produto("#natação")}}> <Translate pt="Natação" en="Swimming"/></a></li>
+                        <li><a href="#ciclismo" onClick={()=>{produto("#ciclismo")}}> <Translate pt="Ciclismo" en="Cycling"/></a></li>
+                        <li><a href="#futebol" onClick={()=>{produto("#futebol")}}> <Translate pt="Futebol" en="Soccer"/></a></li>
                     </ol>
                 </div>
                 <div className="list_itens">
-                        <ol>
+                        <ol id="list_itens">
                             <li>
                                 <div className="img_product">
                                     <img src="/img/peso1.jpg" alt="" />
@@ -197,8 +205,8 @@ export default function Body_body(){
                     <h4><Translate pt="Olá caríssimo" en="Hello, dear"/></h4>
                     <h2><Translate pt="Receba as novidades de primeira" en="Receive the latest updates first"/></h2>
                     <span>
-                        <input type="number" placeholder="Seu whatzap : " />
-                        <button><Translate pt="Send" en="Enviar"/></button>
+                        <input type="number" placeholder="Seu whatzap : " ref={sms_ref} />
+                        <button onClick={()=>{sms()}}><Translate pt="Send" en="Enviar"/></button>
                     </span>
                     <small><Translate pt="Entrar em contacto" en="Get in touch"/> <NavLink>Quinguri</NavLink></small>
                 </div>

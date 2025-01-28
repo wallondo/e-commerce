@@ -23,7 +23,15 @@ section .descont{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    animation: fundo 5s 3s infinite alternate;
 }
+@keyframes fundo{
+    to{
+        background-image: url("../../public/img/f1.jpg");
+    }
+}
+
 section .descont >div{
     width: 95%;
     height: 90%;

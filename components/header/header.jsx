@@ -8,6 +8,10 @@ export default function Header(){
     const Dads = useContext(Dados)
     const [lang,setLang] = useState(Dads.lang);
     
+    function produto(params) {
+      
+    }
+
     return(
         <div className="header">
             <div className="first_div">
@@ -23,19 +27,19 @@ export default function Header(){
                             <Translate pt="Outras promoções" en="Other promotions"/>  
                         </li>
                         <li>
-                            <NavLink><Translate pt="Pesos" en="Weights"/></NavLink>
+                            <a href="#list_itens" onClick={()=>{produto("pesos")}}><Translate pt="Pesos" en="Weights"/></a>
                         </li>
                         <li>
-                            <NavLink><Translate pt="Almofadas" en="Cushions"/></NavLink>
+                            <a href="#list_itens" onClick={()=>{produto("almofadas")}}><Translate pt="Almofadas" en="Cushions"/></a>
                         </li>
                         <li>
-                            <NavLink><Translate pt="Secretárias" en="Desks"/></NavLink>
+                            <a href="#list_itens" onClick={()=>{produto("secretárias")}}><Translate pt="Secretárias" en="Desks"/></a>
                         </li>
                         <li>
-                            <NavLink><Translate pt="Lençóis" en="Sheets"/></NavLink>
+                            <a href="#list_itens" onClick={()=>{produto("lençóis")}}><Translate pt="Lençóis" en="Sheets"/></a>
                         </li>
                         <li>
-                            <NavLink><Translate pt="Banheiros" en="Bathrooms"/></NavLink>
+                            <a href="#list_itens" onClick={()=>{produto("banheiros")}}><Translate pt="Banheiros" en="Bathrooms"/></a>
                         </li>
                     </ol>
                 </div>
@@ -52,9 +56,9 @@ export default function Header(){
                 <div>
                     <select name="" id="" className="categoris">
                         <option value="null"><Translate pt="Categories" en="Categorias"/></option>
-                        <option value="casa"><Translate pt="Casa/copartimentos" en="House/Rooms"/></option>
-                        <option value="escritorios"><Translate pt="Escritório/salas" en="Office/Rooms"/></option>
-                        <option value="ginasio"><Translate pt="Ginásio/parques"  en="Gym/Parks"/></option>
+                        <option value="casa"><Translate pt="Casa" en="House"/></option>
+                        <option value="escritorios"><Translate pt="Escritório" en="Office"/></option>
+                        <option value="ginasio"><Translate pt="Ginásio"  en="Gym"/></option>
                     </select>
                 </div>
                 <div className="searc_secund_div">
@@ -74,16 +78,16 @@ export default function Header(){
                 </div>
                 <div className="others_secund_div">
                         <span className="up_span">
-                            <img src="/img/up.png" alt="" />
+                            <img src="/img/up.png" alt="" style={{cursor:"pointer"}}/>
                         </span>
                         <span className="hurt">
-                            <img src="/img/love0.png" alt="" />
-                            <small className="count">0</small>
+                            <img src="/img/love0.png" alt="" style={{cursor:"pointer"}}/>
+                            <small className="count">{Dads.love.length}</small>
                         </span>
                         <span >
                             <span className="sacola">
-                                <img src="/img/sacola.png" alt="" />
-                                <small className="count">0</small>
+                                <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>
+                                <small className="count">{Dads.carrinho.length}</small>
                             </span>
                             
                             <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> 39.00.kz</span></small>
