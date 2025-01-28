@@ -102,11 +102,12 @@ export default function Compra(){
                     <div className="searc_secund_div">
                         <select name="" id="" onChange={(evt)=>{categoria_all(evt.target.value)}}>
                             <option value="all"><Translate pt="Todas categorias"  en="All categories"/></option>
-                            <option value="casa"><Translate pt="Casa/copartimentos"  en="House/Compartments"/></option>
                             <option value="escritorio"><Translate pt="Escritório/salas"  en="Office/Rooms"/></option>
                             <option value="ginasio"><Translate pt="Ginásio/parques"  en="Gym/Parks"/></option>
+                            <option value="sala"><Translate pt="Salas/copartimentos"  en="Living room/Compartments"/></option>
                             <option value="quarto"><Translate pt="Quartos/Suits"  en="Rooms/Suites"/></option>
                             <option value="cozinha"><Translate pt="Cozinhas/diversos"  en="Kitchens/Others"/></option>
+                            <option value="wc"><Translate pt="WC/Quarto de Banho"  en="WC/BADROOM"/></option>
                         </select>
                         {/* {<Translate pt="Pesquisar Produto" en="Search Product"/>} */}
                         <input type="text" placeholder="Pesquisar Produto : " onChange={(evt)=>{pesquisa(evt.target.value)}} />
