@@ -4,7 +4,7 @@ import App from "./app";
 import { Dados } from "./dados";
 import Oferta from "../front/oferta/oferta";
 import Compra from "../front/compra/compra";
-
+import emobiliarios from "./stock";
 
 export default function Routas(){
     const [lang,setLang] = useState("pt");
@@ -13,13 +13,15 @@ export default function Routas(){
     const [categorias,setCategorias] = useState([])
     const [produtos,setProdutos] = useState([])
     const [p_passados,setP_passados] = useState([])
+    const [mobilias,setMobilias] = useState(emobiliarios)
 
 
     return(
         <Dados.Provider value={{
             lang,setLang,carrinho,setCarrinho,
             categorias,setCategorias,produtos,setProdutos,
-            p_passados,setP_passados,love,setLove
+            p_passados,setP_passados,love,setLove,
+            mobilias,setMobilias
         }}>
             <BrowserRouter>
                 <Routes>

@@ -16,3 +16,12 @@ li{
 button{
     cursor: pointer;
 }
+.add{
+    width: 140px;
+    height: 30px;
+    background-color: var(--orange);
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}

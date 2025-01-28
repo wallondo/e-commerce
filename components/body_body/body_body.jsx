@@ -1,10 +1,14 @@
-import React, { useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./body_body.css";
 import { NavLink } from "react-router-dom";
 import Translate from "../../src/translate";
+import { Dados } from "../../src/dados";
 
 export default function Body_body(){
+    const dados = useContext(Dados);
+    const [prod,setProd] = useState(dados.mobilias)
     const sms_ref = useRef(null)
+    const [mais_c,setMais_c] = useState(dados.mobilias)
       function sms(params){
         if(!sms_ref.current.value==""){
             alert(sms_ref.current.value)
@@ -14,6 +18,22 @@ export default function Body_body(){
     function produto(params) {
        
     }
+    const avaliacao = (ava)=>{
+        if(ava==1){ return <span style={{width:"20%"}}></span>}
+        else if(ava==2){ return <span style={{width:"40%"}}></span>}
+        else if(ava==3){return <span style={{width:"60%"}}></span>}
+        else if(ava==4){return <span style={{width:"80%"}}></span>}
+        else if(ava==5){return <span style={{width:"100%"}}></span>}
+        else{return <span style={{width:"0%"}}></span>}
+    }
+    console.log(prod)
+    useEffect(()=>{
+        let pp = prod.slice(0,6)
+        setProd(pp)
+        pp = prod.slice(8,10)
+        setMais_c(pp)
+        console.log(mais_c)
+    },[])
 
     return(
         <div className="body_body">
@@ -55,72 +75,46 @@ export default function Body_body(){
             <section className="most_buy">
                     <div><h3><Translate pt="Mais compradas" en="Most purchased"/></h3></div>
                     <div className="most_buyder">
-                            <div className="img_desc">
-                                <div className="img">
-                                    <img src="/img/mesa.jpg" alt="" />
-                                </div>
-                                <div className="desc">
-                                    <h3>Mesa de escritorio</h3>
-                                    <h4>333.000.00.kz</h4>
-                                    <div className="first_div_avoluantion">
-                                        <h4>Avaliação <span>5..0</span></h4>
-                                        <div className="div_avoluantion">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                    <div className="numbers">
-                                        <span>
-                                            <p>765</p>
-                                            <p>Escritorios</p>
-                                        </span>
-                                        <span>
-                                            <p>765</p>
-                                            <p>Quartos</p>
-                                        </span>
-                                        <span>
-                                            <p>765</p>
-                                            <p>Salas</p>
-                                        </span>
-                                        <span>
-                                            <p>765</p>
-                                            <p>Outros</p>
-                                        </span>
-                                    </div>
+            {
+                mais_c.map((pro,po)=>(
+                    <div className="img_desc" key={po}>
+                        <div className="img">
+                            <img src={pro.img} alt="" />
+                        </div>
+                        <div className="desc">
+                            <h3>{pro.nome}</h3>
+                            <h4>{pro.preco}.00.kz</h4>
+                            <div className="first_div_avoluantion">
+                                <h4>Avaliação <span>{pro.avaliacao}</span></h4>
+                                <div className="div_avoluantion">
+                                   {
+                                    avaliacao(pro.avaliacao)
+                                   }
                                 </div>
                             </div>
-                            <div className="img_desc">
-                                <div className="img">
-                                <img src="/img/cad.jpg" alt="" />
-                                </div>
-                                <div className="desc">
-                                    <h3>Cadeira de escritorio</h3>
-                                    <h4>333.000.00.kz</h4>
-                                    <div className="first_div_avoluantion">
-                                        <h4>Avaliação <span>5..0</span></h4>
-                                        <div className="div_avoluantion">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                    <div className="numbers">
-                                        <span>
-                                            <p>765</p>
-                                            <p>Escritorios</p>
-                                        </span>
-                                        <span>
-                                            <p>765</p>
-                                            <p>Quartos</p>
-                                        </span>
-                                        <span>
-                                            <p>765</p>
-                                            <p>Salas</p>
-                                        </span>
-                                        <span>
-                                            <p>765</p>
-                                            <p>Outros</p>
-                                        </span>
-                                    </div>
-                                </div>
+                            <div className="numbers">
+                                <span>
+                                    <p>{pro.lugares.quarto}</p>
+                                    <p>Escritorios</p>
+                                </span>
+                                <span>
+                                    <p>{pro.lugares.escritorio}</p>
+                                    <p>Quartos</p>
+                                </span>
+                                <span>
+                                    <p>{pro.lugares.sala}</p>
+                                    <p>Salas</p>
+                                </span>
+                                <span>
+                                    <p>{pro.lugares.outros}</p>
+                                    <p>Outros</p>
+                                </span>
                             </div>
+                        </div>
+                    </div>
+                ))
+            }
+                        
                     </div>
                     <div className="offer_2">
                             <div>
@@ -146,54 +140,19 @@ export default function Body_body(){
                 </div>
                 <div className="list_itens">
                         <ol id="list_itens">
-                            <li>
-                                <div className="img_product">
-                                    <img src="/img/peso1.jpg" alt="" />
-                                </div>
-                                <h4><span>234.000</span>.00kz</h4>
-                                <p>lobas doddkdd</p>
-                                <small>5 5 5 5 5 5</small>
-                            </li>
-                            <li>
-                                <div className="img_product">
-                                    <img src="/img/comp2.jpg" alt="" />
-                                </div>
-                                <h4><span>234.000</span>.00kz</h4>
-                                <p>lobas doddkdd</p>
-                                <small>5 5 5 5 5 5</small>
-                            </li>
-                            <li>
-                                <div className="img_product">
-                                    <img src="/img/sof1.jpg" alt="" />
-                                </div>
-                                <h4><span>234.000</span>.00kz</h4>
-                                <p>lobas doddkdd</p>
-                                <small>5 5 5 5 5 5</small>
-                            </li>
-                            <li>
-                                <div className="img_product">
-                                    <img src="/img/fe1.jpg" alt="" />
-                                </div>
-                                <h4><span>234.000</span>.00kz</h4>
-                                <p>lobas doddkdd</p>
-                                <small>5 5 5 5 5 5</small>
-                            </li>
-                            <li>
-                                <div className="img_product">
-                                    <img src="/img/li2.jpg" alt="" />
-                                </div>
-                                <h4><span>234.000</span>.00kz</h4>
-                                <p>lobas doddkdd</p>
-                                <small>5 5 5 5 5 5</small>
-                            </li>
-                            <li>
-                                <div className="img_product">
-                                    <img src="/img/l4.jpg" alt="" />
-                                </div>
-                                <h4><span>234.000</span>.00kz</h4>
-                                <p>lobas doddkdd</p>
-                                <small>5 5 5 5 5 5</small>
-                            </li>
+                            {
+                                prod.map((pro,pos)=>(
+                                    <li key={pos}>
+                                        <div className="img_product">
+                                            <img src={pro.img} alt="" />
+                                        </div>
+                                        <h4><span>{pro.preco}</span>.00kz</h4>
+                                        <p>{pro.nome}</p>
+                                        <small>{pro.avaliacao}</small>
+                                        <button className="add">adicionar</button>
+                                    </li>
+                                ))
+                            }
                         </ol>
                 </div>
             </section>

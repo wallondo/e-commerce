@@ -24,3 +24,17 @@ https://sms-gmail-api.vercel.app/
 https://wallondo.github.io/bebidas/
 
 
+
+{
+    nome:"mesa de estar",
+    preco:"394.599.00",
+    avaliacao:4,
+    lugares:{
+        quarto:2,
+        escritorio:3,
+        sala:4,
+        outros:10
+    },
+    img:"/img/sof1.jpg"
+}
+
