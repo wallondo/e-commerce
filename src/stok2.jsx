@@ -1,6 +1,6 @@
 var promocoes = [
     {
-        nome:"mesa de estar",
+        nome:"Lange Page 5PJ",
         preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
         avaliacao:4,
         lugares:{
@@ -9,14 +9,404 @@ var promocoes = [
             sala:4,
             outros:10
         },
-        img:"/img/sof1.jpg",
+        img:"/img/w1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
         quant:1,
         desconto:Math.round(Math.random()*50),
         entrega:Math.round(Math.random()*50),
         tipo:"escritorio",
-        tipo2:"promotion"
+        tipo2:"promotion",
+        esp:"e-ecommerce"
     },
+    {
+        nome:"Loja Virtual 10Pj",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/w2.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"e-ecommerce"
+    },
+    {
+        nome:"E-ecommerce 20Pj",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/w3.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"e-ecommerce"
+    },
+    {
+        nome:"Hot Paj 2PJ",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/w4.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"e-ecommerce"
+    },
+    {
+        nome:"Portal 30PJ",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/w5.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"e-ecommerce"
+    },
+
+
+    
+    {
+        nome:"Sinema Em Família",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/canal1.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"canais"
+    },
+    {
+        nome:"70 Canais com +Moves",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/canal2.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"canais"
+    },
+    {
+        nome:"Dark Move",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/canal3.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"canais"
+    },
+    {
+        nome:"+Portais",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/canal4.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"canais"
+    },
+    {
+        nome:"Control Universal",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/canal5.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"canais"
+    },
+
+
+    {
+        nome:"PUBLICIDADES A RÁPIDAS",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/mart1.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+    {
+        nome:"PROMOÇÕES CHAMATIVAS",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/mart2.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+    {
+        nome:"PROMOÇÕES EMPRESARIAL",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/mart3.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+    {
+        nome:"MARKITING WEB",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/mart4.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+    {
+        nome:"MARTKITING TERRITORIAL",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/mart5.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+    {
+        nome:"PROMOÇÃO DIGITAL",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/mart6.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+
+
+
+    {
+        nome:"DEV.WEB / DESIGNER",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/time2.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"equipas"
+    },
+    {
+        nome:"DEV.WEB / MARKITING",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/time4.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"equipas"
+    },
+    {
+        nome:"DEV.WEB / GES.INFRA",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/time4.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"equipas"
+    },
+    {
+        nome:"ALL WORKSPACE",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/time6.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"equipas"
+    },
+    {
+        nome:"NET WORKER",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/time5.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"equipas"
+    },
+
 ]
 
 

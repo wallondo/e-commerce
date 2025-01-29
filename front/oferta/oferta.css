@@ -13,7 +13,7 @@
 
 .promotion_itens{
     overflow-y: auto;
-    height: 400px;
+    height: 500px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -59,8 +59,12 @@
     color: rgb(255, 153, 0);
     font-weight: 700;
 }
-
-
+.promotions{
+    margin-right: 5px;
+}
+.first_div_icon_offer{
+    width: 160px !important;
+}
 
 
 

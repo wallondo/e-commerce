@@ -9,13 +9,11 @@ export default function Oferta(){
     const Dads = useContext(Dados)
     const [lang,setLang] = useState(Dads.lang);
     const [promosoes,setPromosoes] = useState(Dads.promotion)
-    const [mypromotion,setMypromotion] = useState([])
+    const [mypromotion,setMypromotion] = useState(promosoes)
+    const [tipo,setTipo] = useState("all")
     function changLang(params){
         Dads.setLang(params)
         setLang(params)
-    }
-    function produto(params) {
-        
     }
     function up(params) {
         alert("Suas Ofertas Já Estão Atualizadas")
@@ -24,7 +22,16 @@ export default function Oferta(){
         let  prom = promosoes.filter((pr,pos)=>{return pr.tipo2=="promotion"})
 
         setMypromotion(prom)
+
     },[])
+    const pesquisa2 = (params)=>{
+        let text = promosoes.filter((ele,pos)=>{return ele.nome.toLowerCase().includes(params.toLowerCase()) })
+
+        setMypromotion(text)
+    }
+    function tipo_promocao(params){
+        setTipo(params)
+    }
     return(
         <section className="oferta">
            <div className="up">
@@ -47,7 +54,7 @@ export default function Oferta(){
             </div>
             <div className="header">
                     <div className="first_div">
-                        <div className="first_div_icon">
+                        <div className="first_div_icon first_div_icon_offer">
                             <Link to={"/"}>
                                 <span>
                                     <img src="/img/sacola.png" alt="" />
@@ -56,24 +63,24 @@ export default function Oferta(){
                             </Link>
                         </div>
                         <div className="promotions">
-                                <ol>
+                            <ol>
                                 <li style={{color:"rgb(245, 116, 116)",fontSize:"12px"}}>
-                                    <Translate pt="Outras promoções : " en="Other promotions : "/>  
+                                    <Translate pt="Tipos de promoções : " en="Types ofPpromotions : "/>  
                                 </li>
                                 <li>
-                                    <Link to="/offecer"><Translate pt="Canais" en="Channels"/></Link>
+                                    <Link to="/offecer" onClick={(evt)=>{tipo_promocao("canais")}}><Translate pt="Canais" en="Channels"/></Link>
                                 </li>
                                 <li>
-                                    <Link to="/offecer"><Translate pt="E-ecommerce" en="Cushions"/></Link>
+                                    <Link to="/offecer" onClick={(evt)=>{tipo_promocao("e-ecommerce")}}><Translate pt="E-ecommerce" en="E-ecommerce"/></Link>
                                 </li>
                                 <li>
-                                    <Link to="/offecer"><Translate pt="Publicidades" en="Advertisements"/></Link>
+                                    <Link to="/offecer"  onClick={(evt)=>{tipo_promocao("publicidades")}}><Translate pt="Publicidades" en="Advertisements"/></Link>
                                 </li>
                                 <li>
-                                    <Link to="/offecer"><Translate pt="Equipes" en="Teams"/></Link>
+                                    <Link to="/offecer" onClick={(evt)=>{tipo_promocao("equipas")}}><Translate pt="Equipes" en="Teams"/></Link>
                                 </li>
                                 <li>
-                                    <Link to="/offecer"><Translate pt="Produtos" en="Products"/></Link>
+                                    <Link to="/offecer" onClick={(evt)=>{tipo_promocao("all")}}><Translate  pt="Todas Promoções" en="All Promotions : "/></Link>
                                 </li>
                             </ol>
                         </div>
@@ -97,16 +104,16 @@ export default function Oferta(){
                                 </div>
                         </div>
                         <div className="searc_secund_div">
-                            <select name="" id="">
-                                <option value="null"><Translate pt="Promoções " en="Promotions : "/></option>
+                            <select name="" id="" onChange={(evt)=>{tipo_promocao(evt.target.value)}}>
+                                <option value="all"><Translate pt="Todas Promoções" en="All Promotions : "/></option>
                                 <option value="canais"><Translate pt="Canais" en="Channels"/></option>
                                 <option value="e-ecommerce"><Translate pt="Mercado Online" en="E-ecommerce"/></option>
                                 <option value="publicidades"><Translate pt="Publicidades" en="Advertisements"/></option>
                                 <option value="equipas"><Translate pt="Equipas" en="Teams"/></option>
-                                <option value="produtos"><Translate pt="Produtos" en="Products"/></option>
+                                <option value="all"><Translate pt="Produtos" en="Products"/></option>
                             </select>
                             {/* {<Translate pt="Pesquisar Produto" en="Search Product"/>} */}
-                            <input type="text" placeholder="Pesquisar Ofertas : " />
+                            <input type="text" placeholder="Pesquisar Ofertas : "  onChange={(evt)=>{pesquisa2(evt.target.value)}}/>
                             <div className="search_icon">
                                 <img src="/img/lupa.png" alt="" />
                             </div>
@@ -131,15 +138,28 @@ export default function Oferta(){
                     <ol className="promotion_itens">
                             {
                                 mypromotion.map((pr,pos)=>(
+                                   (tipo=="all"?
                                     <li key={pos} style={{backgroundImage:`url(${pr.img})`}}>
-                                        <h3>{pr.nome}</h3>
-                                            <p>{pr.preco}.00kz</p>
-                                        <h3>-{pr.desconto}%</h3>
-                                        <small>Entrega : -{pr.entrega}% </small>
-                                        <span>
-                                            <button>aproveitar</button>
-                                        </span>
+                                    <h3>{pr.nome}</h3>
+                                        <p>{pr.preco}.00kz</p>
+                                    <h3>-{pr.desconto}%</h3>
+                                    <small>Entrega : -{pr.entrega}% </small>
+                                    <span>
+                                        <button>aproveitar</button>
+                                    </span>
                                     </li>
+                                    :tipo==pr.esp?
+                                    <li key={pos} style={{backgroundImage:`url(${pr.img})`}}>
+                                    <h3>{pr.nome}</h3>
+                                        <p>{pr.preco}.00kz</p>
+                                    <h3>-{pr.desconto}%</h3>
+                                    <small>Entrega : -{pr.entrega}% </small>
+                                    <span>
+                                        <button>aproveitar</button>
+                                    </span>
+                                    </li>:""   
+                                )
+                                    
                                 ))
                             }
                     </ol>
