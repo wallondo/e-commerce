@@ -25,15 +25,18 @@ select:active{
     color: black ;
 }
 
-.body_main button:hover,.compra button:hover{
+.body_main button:hover,.compra button:hover,.promotion_itens li button:hover{
     color: black !important;
     outline: 0.5px solid white;
 
 }
-.body_main button:active,.compra button:active{
+.body_main button:active,.compra button:active,.promotion_itens li button:active{
     color: white !important;
     outline: 0.5px solid red;   
 }
+
+
+
 /* .elemento::after {
     content: ''; Necessário para gerar o pseudo-elemento
     position: absolute;

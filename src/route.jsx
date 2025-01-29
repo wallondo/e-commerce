@@ -5,7 +5,7 @@ import { Dados } from "./dados";
 import Oferta from "../front/oferta/oferta";
 import Compra from "../front/compra/compra";
 import emobiliarios from "./stock";
-
+import promocoes from "./stok2";
 export default function Routas(){
     const [lang,setLang] = useState("pt");
     const [carrinho,setCarrinho] = useState([])
@@ -14,6 +14,7 @@ export default function Routas(){
     const [produtos,setProdutos] = useState([])
     const [p_passados,setP_passados] = useState([])
     const [mobilias,setMobilias] = useState(emobiliarios)
+    const [promotion,setPromotion] = useState(promocoes)
 
 
     return(
@@ -21,7 +22,7 @@ export default function Routas(){
             lang,setLang,carrinho,setCarrinho,
             categorias,setCategorias,produtos,setProdutos,
             p_passados,setP_passados,love,setLove,
-            mobilias,setMobilias
+            mobilias,setMobilias,promotion,setPromotion
         }}>
             <BrowserRouter>
                 <Routes>
