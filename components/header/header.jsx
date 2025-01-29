@@ -11,7 +11,9 @@ export default function Header(){
     function produto(params) {
       
     }
-
+    function up(params) {
+        alert("Seu Produtos Já Estão Atualizados")
+    }
     return(
         <div className="header">
             <div className="first_div">
@@ -45,12 +47,13 @@ export default function Header(){
             </div>
             <div className="secund_div">
                 <div>
-                    <select name="" id="" className="categoris">
-                        <option value="null"><Translate pt="Categories" en="Categorias"/></option>
-                        <option value="casa"><Translate pt="Casa" en="House"/></option>
-                        <option value="escritorios"><Translate pt="Escritório" en="Office"/></option>
-                        <option value="ginasio"><Translate pt="Ginásio"  en="Gym"/></option>
-                    </select>
+                    <div className="categoris">
+                            <ol>
+                                <Link to={"/"}><Translate pt="Início" en="home"/></Link>
+                                <Link to={"/offecer"}><Translate pt="ofertas" en="offer"/></Link>
+                                <Link to={"/buy/3822nf8h98798375983"}><Translate pt={"produtos"} en={"products"}/></Link>
+                            </ol>
+                    </div>
                 </div>
                 <div className="searc_secund_div">
                     <select name="" id="">
@@ -62,19 +65,16 @@ export default function Header(){
                         <option value="cozinha"><Translate pt="Cozinhas/diversos"  en="Kitchens/Others"/></option>
                     </select>
                     {/* {<Translate pt="Pesquisar Produto" en="Search Product"/>} */}
-                    <input type="text" placeholder="Pesquisar Produto : " />
+                    <input type="text" placeholder="Pesquisar Em  Produto : " />
                     <div className="search_icon">
                         <img src="/img/lupa.png" alt="" />
                     </div>
                 </div>
                 <div className="others_secund_div">
                         <span className="up_span">
-                            <img src="/img/up.png" alt="" style={{cursor:"pointer"}}/>
+                            <img onClick={up} className="roda_up" src="/img/up.png" alt="" style={{cursor:"pointer"}}/>
                         </span>
-                        <span className="hurt">
-                            <img src="/img/love0.png" alt="" style={{cursor:"pointer"}}/>
-                            <small className="count">{Dads.love.length}</small>
-                        </span>
+                      
                         <span >
                                 <span className="sacola">
                             <Link to={"/buy/529ssfdssfsff85009"}>
@@ -83,7 +83,7 @@ export default function Header(){
                                     <small className="count">{Dads.carrinho.length}</small>
                                 </span>
                             
-                            <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> 39.00.kz</span></small>
+                            <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -1030.9.00.kz </span></small>
                         </span>
                 </div>
             </div>

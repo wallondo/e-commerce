@@ -25,3 +25,8 @@ button{
     font-weight: 700;
     cursor: pointer;
 }
+.roda_up:active{
+    width: 28px;
+    height: 28px;
+}
+

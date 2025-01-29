@@ -23,7 +23,7 @@ export default function App(){
                 <div>
                     <select name="" id="" >
                         <option value="kz">AO ANGOLA</option>
-                        <option value="usd">USD DOLAR</option>
+                        <option value="usd" className="strow" disabled>USD DOLAR</option>
                     </select>
                 </div>
                 <div>

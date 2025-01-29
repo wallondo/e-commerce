@@ -2,7 +2,7 @@
     transition: border-width 0.3s ease;
     border: none;
 } */
-.first_div  a:hover{
+.first_div  a:hover,.categoris ol a:hover{
     border-bottom: 2px solid white;
     color: grey;
   
@@ -34,7 +34,6 @@ select:active{
     color: white !important;
     outline: 0.5px solid red;   
 }
-
 /* .elemento::after {
     content: ''; Necessário para gerar o pseudo-elemento
     position: absolute;

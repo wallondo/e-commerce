@@ -16,7 +16,9 @@ export default function Oferta(){
     function produto(params) {
         
     }
-    
+    function up(params) {
+        alert("Seu Produtos Já Estão Atualizados")
+    }
 
     return(
         <section className="oferta">
@@ -81,12 +83,13 @@ export default function Oferta(){
                                 </div>
                                 <div className="secund_div">
                                     <div>
-                                        <select name="" id="" className="categoris">
-                                            <option value="null"><Translate pt="Categories" en="Categorias"/></option>
-                                            <option value="casa"><Translate pt="Casa" en="House"/></option>
-                                            <option value="escritorios"><Translate pt="Escritório" en="Office"/></option>
-                                            <option value="ginasio"><Translate pt="Ginásio"  en="Gym"/></option>
-                                        </select>
+                                          <div className="categoris">
+                                            <ol>
+                                                <Link to={"/"}><Translate pt="Início" en="home"/></Link>
+                                                <Link to={"/offecer"}><Translate pt="ofertas" en="offer"/></Link>
+                                                <Link to={"/buy/3822nf8h98798375983"}><Translate pt={"produtos"} en={"products"}/></Link>
+                                            </ol>
+                                            </div>
                                     </div>
                                     <div className="searc_secund_div">
                                         <select name="" id="">
@@ -105,19 +108,16 @@ export default function Oferta(){
                                     </div>
                                     <div className="others_secund_div">
                                             <span className="up_span">
-                                                <img src="/img/up.png" alt="" style={{cursor:"pointer"}}/>
+                                                <img src="/img/up.png" onClick={up} className="roda_up" alt="" style={{cursor:"pointer"}}/>
                                             </span>
-                                            <span className="hurt">
-                                                <img src="/img/love0.png" alt="" style={{cursor:"pointer"}}/>
-                                                <small className="count">{Dads.love.length}</small>
-                                            </span>
+                                       
                                             <span >
                                                 <span className="sacola">
                                                     <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>
                                                     <small className="count">{Dads.carrinho.length}</small>
                                                 </span>
                                                 
-                                                <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> 39.00.kz</span></small>
+                                                <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -3039.80.00.kz</span></small>
                                             </span>
                                     </div>
                                 </div>
