@@ -540,9 +540,12 @@ section .descont2 >div button{
 }
 .your_servecis >  div h4{
     margin: 5px 0px;
+    color: var(--orange);
+    font-weight: bold;
 }
 .your_servecis >  div p{
     text-align: center;
+    font-weight: 700;
 }
 
 

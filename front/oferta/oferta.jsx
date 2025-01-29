@@ -17,7 +17,7 @@ export default function Oferta(){
         
     }
     function up(params) {
-        alert("Seu Produtos Já Estão Atualizados")
+        alert("Suas Ofertas Já Estão Atualizadas")
     }
 
     return(
@@ -30,7 +30,7 @@ export default function Oferta(){
                         <div>
                             <select name="" id="" >
                                 <option value="kz">AO ANGOLA</option>
-                                <option value="usd">USD DOLAR</option>
+                                <option value="usd" disabled>USD DOLAR</option>
                             </select>
                         </div>
                         <div>
@@ -101,7 +101,7 @@ export default function Oferta(){
                                             <option value="cozinha"><Translate pt="Cozinhas/diversos"  en="Kitchens/Others"/></option>
                                         </select>
                                         {/* {<Translate pt="Pesquisar Produto" en="Search Product"/>} */}
-                                        <input type="text" placeholder="Pesquisar Produto : " />
+                                        <input type="text" placeholder="Pesquisar Ofertas : " />
                                         <div className="search_icon">
                                             <img src="/img/lupa.png" alt="" />
                                         </div>
@@ -117,7 +117,7 @@ export default function Oferta(){
                                                     <small className="count">{Dads.carrinho.length}</small>
                                                 </span>
                                                 
-                                                <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -3039.80.00.kz</span></small>
+                                                <small> <Translate pt="Suas ofertas com desconto : " en="Your discounted offers. : "/> <span style={{color:"red"}}> -3039.80.00.kz</span> <br /> <Translate pt="por cada oferta" en={"Per offer."} /></small>
                                             </span>
                                     </div>
                                 </div>

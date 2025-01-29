@@ -12,7 +12,7 @@ export default function Header(){
       
     }
     function up(params) {
-        alert("Seu Produtos Já Estão Atualizados")
+        alert("Seu Produtos E Ofertas Já Estão Atualizadas")
     }
     return(
         <div className="header">
