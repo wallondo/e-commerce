@@ -192,7 +192,26 @@ var promocoes = [
         tipo2:"promotion",
         esp:"canais"
     },
-
+    {
+        nome:"TV UNIVERSAL",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/canais.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"canais"
+    },
+    
 
     {
         nome:"PUBLICIDADES A RÁPIDAS",
@@ -213,6 +232,26 @@ var promocoes = [
         tipo2:"promotion",
         esp:"publicidades"
     },
+    {
+        nome:"PUBLICIDADES INTENCIVAS",
+        preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),
+        avaliacao:4,
+        lugares:{
+            quarto:2,
+            escritorio:3,
+            sala:4,
+            outros:10
+        },
+        img:"/img/divulga.jpg",
+        id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
+        desconto:Math.round(Math.random()*50),
+        entrega:Math.round(Math.random()*50),
+        tipo:"escritorio",
+        tipo2:"promotion",
+        esp:"publicidades"
+    },
+    
     {
         nome:"PROMOÇÕES CHAMATIVAS",
         preco:Math.round(Math.random()*100000)+"."+Math.round(Math.random()*100),

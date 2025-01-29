@@ -50,8 +50,8 @@ export default function Header(){
                     <div className="categoris">
                             <ol>
                                 <Link to={"/"}><Translate pt="Início" en="home"/></Link>
-                                <Link to={"/offecer"}><Translate pt="ofertas" en="offer"/></Link>
                                 <Link to={"/buy/3822nf8h98798375983"}><Translate pt={"produtos"} en={"products"}/></Link>
+                                <Link to={"/offecer"}><Translate pt="ofertas" en="offer"/></Link>
                             </ol>
                     </div>
                 </div>
