@@ -230,7 +230,7 @@ export default function Body_body(){
                                             <h4><span>{pro.preco}</span>.00kz</h4>
                                             <p>{pro.nome}</p>
                                             <small>{pro.avaliacao}</small>
-                                            <button className="add" onClick={()=>{adicionar(pro.id)}}> <Translate pt="adicionar" en="more" /></button>
+                                            <button className="add" onClick={()=>{adicionar(pro.id)}}> <Translate pt="ver agora" en="see" /></button>
                                         </li>
                                     ):"")
                                     :
@@ -241,7 +241,7 @@ export default function Body_body(){
                                     <h4><span>{pro.preco}</span>.00kz</h4>
                                     <p>{pro.nome}</p>
                                     <small>{pro.avaliacao}</small>
-                                    <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="adicionar" en="more" /></button>
+                                    <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="ver agora" en="see" /></button>
                                     </li>
                                 )
                             ))

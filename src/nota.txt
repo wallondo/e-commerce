@@ -43,3 +43,5 @@ TPC tentar fazr link interno com NAvLInk ou LINK , no router
                                                             <route>
                                                                 <route to="#interno">  
                                                             </route> // algo assim
+
+tirar o coracao , inutil

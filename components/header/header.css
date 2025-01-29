@@ -197,7 +197,13 @@ li{
     width: 30px;
     position: relative;
 }
-
+.others_secund_div > span > a span {
+    display: flex;
+    height: 28px;
+    width: 30px;
+    position: relative;
+    
+}
 .sacola .count{
     position: absolute;
     top: -2px;
@@ -213,3 +219,9 @@ li{
     align-items: center;
     outline: .5px solid black;
 }
+
+.sacola  img{
+    width: 20px;
+    height: 30px;
+}
+

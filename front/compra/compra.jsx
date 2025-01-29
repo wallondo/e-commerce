@@ -9,10 +9,14 @@ export default function Compra(){
     const Dads = useContext(Dados)
     const [cars,setCars] = useState([...Dads.carrinho]) 
     const [lang,setLang] = useState(Dads.lang);
+    const [cars2,setCars2] = useState(cars)
     const [all_products,setAll_products] = useState(Dads.mobilias)
     const [products,setProduts] = useState(all_products)
     const [categorias_all,setCategorias_all] = useState("all") 
 
+    useEffect(()=>{
+        setCars2(cars)
+    },[cars])
     useEffect(()=>{
         setCars(Dads.carrinho)
     },[Dads.carrinho])
@@ -76,6 +80,11 @@ export default function Compra(){
         let text = all_products.filter((ele,pos)=>{return ele.nome.toLowerCase().includes(params.toLowerCase()) })
 
         setProduts(text)
+    }
+    const pesquisa2 = (params)=>{
+        let text = cars.filter((ele,pos)=>{return ele.nome.toLowerCase().includes(params.toLowerCase()) })
+
+        setCars2(text)
     }
     const categoria_all = (params) =>{
         setCategorias_all(params)
@@ -188,7 +197,7 @@ export default function Compra(){
                 </div>
             </div>
             <section className="produtos">
-                <section className="carrinho_tela" id="tela_car_id">
+                <section className="carrinho_tela show" id="tela_car_id">
                         <div className="top_car">
                             <div className="icon_car">
                                 <div>
@@ -203,7 +212,7 @@ export default function Compra(){
                                 </div>
                             </div>
                             <div className="serch_car">
-                                <input type="text" placeholder="Pesquisar Produto : " />
+                                <input type="text" onChange={(evt)=>{pesquisa2(evt.target.value)}} placeholder="Pesquisar Produto : " />
                                 <div className="search_icon">
                                     <img src="/img/lupa.png" alt="" />
                                 </div>
@@ -211,7 +220,8 @@ export default function Compra(){
                         </div>
                         <ol className="list_cars">
                                 {
-                                    cars.map((pro,pos)=>(
+                                    (cars2.length<1?(<h2 className="vazio">Carrinho vazio</h2>):
+                                    cars2.map((pro,pos)=>(
                                         <li key={pos}>
                                             <div className="img_product">
                                             <img src={pro.img} alt="" />
@@ -227,6 +237,7 @@ export default function Compra(){
                                             </div>
                                         </li>
                                     ))
+                                )
                                 }
                         </ol>
                 </section>

@@ -76,10 +76,12 @@ export default function Header(){
                             <small className="count">{Dads.love.length}</small>
                         </span>
                         <span >
-                            <span className="sacola">
-                                <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>
-                                <small className="count">{Dads.carrinho.length}</small>
-                            </span>
+                                <span className="sacola">
+                            <Link to={"/buy/529ssfdssfsff85009"}>
+                                    <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>
+                            </Link>
+                                    <small className="count">{Dads.carrinho.length}</small>
+                                </span>
                             
                             <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> 39.00.kz</span></small>
                         </span>
