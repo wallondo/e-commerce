@@ -8,9 +8,46 @@ import Translate from "../../src/translate";
 export default function Oferta(){
     const Dads = useContext(Dados)
     const [lang,setLang] = useState(Dads.lang);
-    const [promosoes,setPromosoes] = useState(Dads.promotion)
+    const [promosoes,setPromosoes] = useState([...Dads.promotion])
     const [mypromotion,setMypromotion] = useState(promosoes)
+    const [mypromotion_car,setMypromotion_car] = useState([])
+    const [mypromotion_car2,setMypromotion_car2] = useState(mypromotion_car)
+    const [mypromotion_car2_up,setMypromotion_car2_up] = useState(mypromotion_car)
+    
     const [tipo,setTipo] = useState("all")
+
+    const menos = (params) =>{
+        let car = promosoes.find(itens=>{return itens.id==params})
+        let carrs = [...mypromotion_car]
+        let tem = carrs.find(ele=>{return ele.id==params})
+        if(tem){
+            if(tem.quant<=0){
+                let po = 0;
+                let del = carrs.findIndex((ele)=>ele.id==params)
+              
+                let new_cars = mypromotion_car.splice(del,1)
+                setMypromotion_car([...new_cars])
+                tem.quant=0;   
+            }else if(tem.quant>=0){
+                tem.quant-=1
+            }
+            if(tem.quant<=0){
+                let po = 0;
+                let del = carrs.findIndex((ele)=>ele.id==params)
+              
+                let new_cars = mypromotion_car.splice(del,1)
+                setMypromotion_car([...new_cars])
+                tem.quant=1;   
+            }
+        }else{
+            carrs.unshift(car)
+            Dads.setOffertas(carrs)
+        }
+        let past = [...mypromotion_car]
+        setMypromotion_car([...past])
+        // atualizar()
+    }
+
     function changLang(params){
         Dads.setLang(params)
         setLang(params)
@@ -32,6 +69,40 @@ export default function Oferta(){
     function tipo_promocao(params){
         setTipo(params)
     }
+    const atualizar = ()=>{
+        setMypromotion_car([...mypromotion_car])
+    }
+    const adicionar = (params) =>{
+        let car = promosoes.find(itens=>{return itens.id==params})
+        
+        let carrs = [...mypromotion_car];
+        let tem = carrs.find(ele=>{return ele.id==params})
+        if(tem){
+            console.log(tem);
+            
+            tem.quant+=1
+            let cc = [...mypromotion_car]
+            setMypromotion_car([...cc])
+        }else{
+            let cc = [...mypromotion_car]
+            cc.unshift(car)
+            setMypromotion_car([...cc])
+        }
+        //  atualizar()
+    }
+    useEffect(()=>{
+        setMypromotion_car2(mypromotion_car)
+    },[mypromotion_car])
+  
+    function tela_offer(params) {
+        document.getElementById("tela_offer_id").classList.toggle("show")
+    }
+    function pesquisa_offer(params) {
+        let text = mypromotion_car.filter((ele,pos)=>{return ele.nome.toLowerCase().includes(params.toLowerCase()) })
+
+        setMypromotion_car2(text)
+    }
+
     return(
         <section className="oferta">
            <div className="up">
@@ -122,19 +193,63 @@ export default function Oferta(){
                                 <span className="up_span">
                                     <img src="/img/up.png" onClick={up} className="roda_up" alt="" style={{cursor:"pointer"}}/>
                                 </span>
-                            
+                               
                                 <span >
                                     <span className="sacola">
-                                        <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>
-                                        <small className="count">{Dads.carrinho.length}</small>
+                                        <img src="/img/offer1.png" onClick={()=>{tela_offer()}} alt="" style={{cursor:"pointer"}}/>
+                                        <small className="count">{mypromotion_car.length}</small>
                                     </span>
-                                    
-                                    <small> <Translate pt="Suas ofertas com desconto : " en="Your discounted offers. : "/> <span style={{color:"red"}}> -3039.80.00.kz</span> <br /> <Translate pt="por cada oferta" en={"Per offer."} /></small>
+                                <small> <Translate pt="Suas ofertas com desconto : " en="Your discounted offers. : "/> <span style={{color:"red"}}> -3039.80.00.kz</span> <br /> <Translate pt="por cada oferta" en={"Per offer."} /></small>
                                 </span>
+                                    
                         </div>
                     </div>
             </div>
             <section className="corpo_buy">
+                   <section className="carrinho_tela show" id="tela_offer_id">
+                                        <div className="top_car">
+                                            <div className="icon_car">
+                                                <div>
+                                                    <Link to={"/"}>
+                                                        <img src="/img/sacola.png" alt="" />
+                                                    </Link>
+                                                    <small>Seu mercado online</small>
+                                                </div>
+                                                    <h3>Seu carrinho de compras</h3>
+                                                <div>
+                                                    <img src="/img/car.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div className="serch_car">
+                                                <input type="text" onChange={(evt)=>{pesquisa_offer(evt.target.value)}} placeholder="Pesquisar as Ofertas : " />
+                                                <div className="search_icon">
+                                                    <img src="/img/lupa.png" alt="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ol className="list_cars">
+                                                {
+                                                    (mypromotion_car2.length<1?(<h2 className="vazio">Sem Ofertas Aproveitadas</h2>):
+                                                    mypromotion_car2.map((pro,pos)=>(
+                                                        <li key={pos}>
+                                                            <div className="img_product">
+                                                            <img src={pro.img} alt="" />
+                                                            </div>
+                                                            <h4>Preço : <span>{pro.preco}</span>.00kz</h4>
+                                                            <h4>Total : <span>{pro.preco*pro.quant}</span>.00kz</h4>
+                                                            <p>{pro.nome}</p>
+                                                            <small>Avaliação : {pro.avaliacao}</small>
+                                                            <p>Quantidade : {pro.quant}</p>
+                                                            <div className="bt_car">
+                                                                <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="mais" en="more" /></button>
+                                                                <button className="add" onClick={()=>{menos(pro.id)}}><Translate pt="menos" en="less" /></button>
+                                                            </div>
+                                                        </li>
+                                                    ))
+                                                )
+                                                }
+                                        </ol>
+                    </section>
                     <ol className="promotion_itens">
                             {
                                 mypromotion.map((pr,pos)=>(
@@ -145,7 +260,7 @@ export default function Oferta(){
                                     <h3>-{pr.desconto}%</h3>
                                     <small>Entrega : -{pr.entrega}% </small>
                                     <span>
-                                        <button>aproveitar</button>
+                                        <button onClick={()=>{adicionar(pr.id)}}>aproveitar</button>
                                     </span>
                                     </li>
                                     :tipo==pr.esp?
@@ -155,7 +270,7 @@ export default function Oferta(){
                                     <h3>-{pr.desconto}%</h3>
                                     <small>Entrega : -{pr.entrega}% </small>
                                     <span>
-                                        <button>aproveitar</button>
+                                        <button onClick={()=>{adicionar(pro.id)}}>aproveitar</button>
                                     </span>
                                     </li>:""   
                                 )

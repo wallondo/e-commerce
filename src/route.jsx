@@ -13,6 +13,7 @@ export default function Routas(){
     const [categorias,setCategorias] = useState([])
     const [produtos,setProdutos] = useState([])
     const [p_passados,setP_passados] = useState([])
+    const [offertas,setOffertas] = useState([])
     const [mobilias,setMobilias] = useState(emobiliarios)
     const [promotion,setPromotion] = useState(promocoes)
 
@@ -22,7 +23,8 @@ export default function Routas(){
             lang,setLang,carrinho,setCarrinho,
             categorias,setCategorias,produtos,setProdutos,
             p_passados,setP_passados,love,setLove,
-            mobilias,setMobilias,promotion,setPromotion
+            mobilias,setMobilias,promotion,setPromotion,
+            offertas,setOffertas
         }}>
             <BrowserRouter>
                 <Routes>
