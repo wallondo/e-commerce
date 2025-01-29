@@ -11,6 +11,7 @@ var emobiliarios = [
         },
         img:"/img/sof1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"escritorio"
     },
     {
@@ -25,6 +26,7 @@ var emobiliarios = [
         },
         img:"/img/sof3.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"sala"
     },
     {
@@ -39,6 +41,7 @@ var emobiliarios = [
         },
         img:"/img/sof2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"sala"
     },
     {
@@ -53,6 +56,7 @@ var emobiliarios = [
         },
         img:"/img/liq2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"cozinha"
     },
     {
@@ -67,6 +71,7 @@ var emobiliarios = [
         },
         img:"/img/liq1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"cozinha"
     },
     {
@@ -81,6 +86,7 @@ var emobiliarios = [
         },
         img:"/img/peso1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"ginasio"
     },
     {
@@ -95,6 +101,7 @@ var emobiliarios = [
         },
         img:"/img/mesa1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"escritorio"
     },
     {
@@ -109,6 +116,7 @@ var emobiliarios = [
         },
         img:"/img/mesa2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"escritorio"
     },
     {
@@ -123,6 +131,7 @@ var emobiliarios = [
         },
         img:"/img/mesa3.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -137,6 +146,7 @@ var emobiliarios = [
         },
         img:"/img/mesa4.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"escritorio"
     },
     {
@@ -151,6 +161,7 @@ var emobiliarios = [
         },
         img:"/img/cad2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -165,6 +176,7 @@ var emobiliarios = [
         },
         img:"/img/cad1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"escritorio"
     },
     {
@@ -179,6 +191,7 @@ var emobiliarios = [
         },
         img:"/img/cad5.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"escritorio"
     },
     {
@@ -193,6 +206,7 @@ var emobiliarios = [
         },
         img:"/img/len2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -207,6 +221,7 @@ var emobiliarios = [
         },
         img:"/img/len4.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -221,6 +236,7 @@ var emobiliarios = [
         },
         img:"/img/len3.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -235,6 +251,7 @@ var emobiliarios = [
         },
         img:"/img/cali.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"ginasio"
     },
     {
@@ -249,6 +266,7 @@ var emobiliarios = [
         },
         img:"/img/corrida1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"ginasio"
     },
     {
@@ -263,6 +281,7 @@ var emobiliarios = [
         },
         img:"/img/corrida1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"ginasio"
     },
     {
@@ -277,6 +296,7 @@ var emobiliarios = [
         },
         img:"/img/corrida2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"ginasio"
     },
     {
@@ -291,6 +311,7 @@ var emobiliarios = [
         },
         img:"/img/c1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -305,6 +326,7 @@ var emobiliarios = [
         },
         img:"/img/c2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"quarto"
     },
     {
@@ -319,6 +341,7 @@ var emobiliarios = [
         },
         img:"/img/tv1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"sala"
     },
     {
@@ -333,6 +356,7 @@ var emobiliarios = [
         },
         img:"/img/tv1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"sala"
     },
     {
@@ -347,6 +371,7 @@ var emobiliarios = [
         },
         img:"/img/sofa1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"sala"
     },
     {
@@ -361,6 +386,7 @@ var emobiliarios = [
         },
         img:"/img/sofa2.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"sala"
     },
     {
@@ -375,6 +401,7 @@ var emobiliarios = [
         },
         img:"/img/fogao.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"cozinha"
     },
     {
@@ -389,6 +416,7 @@ var emobiliarios = [
         },
         img:"/img/faca.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"cozinha"
     },
     {
@@ -403,6 +431,7 @@ var emobiliarios = [
         },
         img:"/img/forno.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"cozinha"
     },
     {
@@ -417,6 +446,7 @@ var emobiliarios = [
         },
         img:"/img/medida.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"cozinha"
     },
     {
@@ -431,6 +461,7 @@ var emobiliarios = [
         },
         img:"/img/wc1.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -445,6 +476,7 @@ var emobiliarios = [
         },
         img:"/img/wc3.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -459,6 +491,7 @@ var emobiliarios = [
         },
         img:"/img/wc4.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -473,6 +506,7 @@ var emobiliarios = [
         },
         img:"/img/wc5.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -487,6 +521,7 @@ var emobiliarios = [
         },
         img:"/img/wc6.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -501,6 +536,7 @@ var emobiliarios = [
         },
         img:"/img/wc7.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -515,6 +551,7 @@ var emobiliarios = [
         },
         img:"/img/wc8.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
     {
@@ -529,6 +566,7 @@ var emobiliarios = [
         },
         img:"/img/wc9.jpg",
         id:Math.round(Math.random()*100000000000000*Math.random()*753),
+        quant:1,
         tipo:"wc"
     },
 

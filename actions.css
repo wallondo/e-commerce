@@ -25,12 +25,12 @@ select:active{
     color: black ;
 }
 
-.body_main button:hover{
+.body_main button:hover,.compra button:hover{
     color: black !important;
     outline: 0.5px solid white;
 
 }
-.body_main button:active{
+.body_main button:active,.compra button:active{
     color: white !important;
     outline: 0.5px solid red;   
 }

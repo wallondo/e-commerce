@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../../components/header/header";
 import "./compra.css";
 import Translate from "../../src/translate";
@@ -7,30 +7,83 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Compra(){
     const Dads = useContext(Dados)
+    const [cars,setCars] = useState([...Dads.carrinho]) 
     const [lang,setLang] = useState(Dads.lang);
     const [all_products,setAll_products] = useState(Dads.mobilias)
     const [products,setProduts] = useState(all_products)
     const [categorias_all,setCategorias_all] = useState("all") 
 
-
-    function changLang(params){
+    useEffect(()=>{
+        setCars(Dads.carrinho)
+    },[Dads.carrinho])
+    const atualizar = ()=>{
+        setCars([...Dads.carrinho])
+    }
+    const tela_car = ()=>{
+        document.getElementById("tela_car_id").classList.toggle("show")
+    }
+    const changLang = (params) =>{
         Dads.setLang(params)
         setLang(params)
     }
-    function produto(params) {
-
+    const produto = (params) =>{
+        alert()
+        
     }
-    function pesquisa(params){
+    const adicionar = (params) =>{
+        let car = all_products.find(itens=>{return itens.id==params})
+       
+        let carrs = [...Dads.carrinho]
+        let tem = carrs.find(ele=>{return ele.id==params})
+        if(tem){
+            tem.quant+=1
+        }else{
+            carrs.unshift(car)
+            Dads.setCarrinho(carrs)
+        }
+        atualizar()
+    }
+    const menos = (params) =>{
+        let car = all_products.find(itens=>{return itens.id==params})
+        let carrs = [...Dads.carrinho]
+        let tem = carrs.find(ele=>{return ele.id==params})
+        if(tem){
+            if(tem.quant<=0){
+                let po = 0;
+                let del = carrs.findIndex((ele)=>ele.id==params)
+              
+                let new_cars = Dads.carrinho.splice(del,1)
+                setCars([...new_cars])
+                tem.quant=0;   
+            }else if(tem.quant>=0){
+                tem.quant-=1
+            }
+            if(tem.quant<=0){
+                let po = 0;
+                let del = carrs.findIndex((ele)=>ele.id==params)
+              
+                let new_cars = Dads.carrinho.splice(del,1)
+                setCars([...new_cars])
+                tem.quant=1;   
+            }
+        }else{
+            carrs.unshift(car)
+            Dads.setCarrinho(carrs)
+        }
+        atualizar()
+    }
+    const pesquisa = (params)=>{
         let text = all_products.filter((ele,pos)=>{return ele.nome.toLowerCase().includes(params.toLowerCase()) })
 
         setProduts(text)
     }
-    function categoria_all(params){
+    const categoria_all = (params) =>{
         setCategorias_all(params)
     }
 
     return(
         <section className="compra">
+        
              <div className="up">
                 <div>
                     {lang=="pt"? <p><span>Bem-vindo! </span> Transforme sua casa com móveis de qualidade e ofertas especiais!</p>:
@@ -125,7 +178,7 @@ export default function Compra(){
                             </span>
                             <span >
                                 <span className="sacola">
-                                    <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>
+                                    <img src="/img/sacola.png" onClick={()=>{tela_car()}} className="sacola_car" alt="" style={{cursor:"pointer"}}/>
                                     <small className="count">{Dads.carrinho.length}</small>
                                 </span>
                                 
@@ -135,36 +188,78 @@ export default function Compra(){
                 </div>
             </div>
             <section className="produtos">
-                <ol>
-                    {
-                        products.map((pro,pos)=>(
-                            (categorias_all!="all"?(
-                                (categorias_all==pro.tipo?(
+                <section className="carrinho_tela" id="tela_car_id">
+                        <div className="top_car">
+                            <div className="icon_car">
+                                <div>
+                                    <Link to={"/"}>
+                                        <img src="/img/sacola.png" alt="" />
+                                    </Link>
+                                    <small>Seu mercado online</small>
+                                </div>
+                                    <h3>Seu carrinho de compras</h3>
+                                <div>
+                                    <img src="/img/car.png" alt="" />
+                                </div>
+                            </div>
+                            <div className="serch_car">
+                                <input type="text" placeholder="Pesquisar Produto : " />
+                                <div className="search_icon">
+                                    <img src="/img/lupa.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <ol className="list_cars">
+                                {
+                                    cars.map((pro,pos)=>(
+                                        <li key={pos}>
+                                            <div className="img_product">
+                                            <img src={pro.img} alt="" />
+                                            </div>
+                                            <h4>Preço : <span>{pro.preco}</span>.00kz</h4>
+                                            <h4>Total : <span>{pro.preco*pro.quant}</span>.00kz</h4>
+                                            <p>{pro.nome}</p>
+                                            <small>Avaliação : {pro.avaliacao}</small>
+                                            <p>Quantidade : {pro.quant}</p>
+                                            <div className="bt_car">
+                                                <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="mais" en="more" /></button>
+                                                <button className="add" onClick={()=>{menos(pro.id)}}><Translate pt="menos" en="less" /></button>
+                                            </div>
+                                        </li>
+                                    ))
+                                }
+                        </ol>
+                </section>
+                    <ol>
+                        {
+                            products.map((pro,pos)=>(
+                                (categorias_all!="all"?(
+                                    (categorias_all==pro.tipo?(
                                     <li key={pos}>
-                                <div className="img_product">
-                                <img src={pro.img} alt="" />
-                                </div>
-                                <h4><span>{pro.preco}</span>.00kz</h4>
-                                <p>{pro.nome}</p>
-                                <small>{pro.avaliacao}</small>
-                                <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="adicionar" en="more" /></button>
-                                </li>
-                                ):"")
-                            ):(
-                                <li key={pos}>
-                                <div className="img_product">
-                                <img src={pro.img} alt="" />
-                                </div>
-                                <h4><span>{pro.preco}</span>.00kz</h4>
-                                <p>{pro.nome}</p>
-                                <small>{pro.avaliacao}</small>
-                                <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="adicionar" en="more" /></button>
-                                </li>
+                                        <div className="img_product">
+                                        <img src={pro.img} alt="" />
+                                        </div>
+                                        <h4><span>{pro.preco}</span>.00kz</h4>
+                                        <p>{pro.nome}</p>
+                                        <small>Avaliação : {pro.avaliacao}</small>
+                                        <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="adicionar" en="more" /></button>
+                                    </li>
+                                    ):"")
+                                ):(
+                                    <li key={pos}>
+                                        <div className="img_product">
+                                        <img src={pro.img} alt="" />
+                                        </div>
+                                        <h4><span>{pro.preco}</span>.00kz</h4>
+                                        <p>{pro.nome}</p>
+                                        <small>Avaliação : {pro.avaliacao} <img src="/img/estrela1.jpg" alt="" /></small>
+                                        <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="adicionar" en="more" /></button>
+                                    </li>
+                                ))
                             ))
-                        ))
-                    }
-                </ol>
-            </section>
+                        }
+                    </ol>
+                </section>
         </section>
     )
 }
