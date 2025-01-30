@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./app.css";
+import "./response.css";
 import Header from "../components/header/header";
 import Body from "../components/body/body";
 import Footer from "../components/footer/footer";
@@ -20,13 +21,13 @@ export default function App(){
                     {lang=="pt"? <p><span>Bem-vindo! </span> Transforme sua casa com móveis de qualidade e ofertas especiais!</p>:
                         <p> <span> Welcome! </span> Transform your home with quality furniture and special offers! </p>}
                  </div>
-                <div>
+                <div className="optio">
                     <select name="" id="" >
                         <option value="kz">AO ANGOLA</option>
                         <option value="usd" className="strow" disabled>USD DOLAR</option>
                     </select>
                 </div>
-                <div>
+                <div className="optio">
                     <select name="" id="" onChange={(evt)=>{changLang(evt.target.value)}}>
                         <option value="pt">PT ANGOLA</option>
                         <option value="en">EN USA</option>

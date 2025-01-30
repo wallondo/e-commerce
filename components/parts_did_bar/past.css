@@ -1,6 +1,6 @@
 .past{
     width: 200px;
-    height: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     border: 2px solid rgba(128, 128, 128, 0.493);
     margin: 5px 0px;
@@ -30,7 +30,7 @@
 }
 .past ol li >div:first-child{
     width: 70px;
-    height: 80px;
+    min-height: 80px;
     display: flex;
     align-items: center;
 }
@@ -41,7 +41,7 @@
 
 .past ol li >div:last-child{
     width: 110px;
-    height: 80px;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;

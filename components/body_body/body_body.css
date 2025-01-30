@@ -1,7 +1,6 @@
 @import url("../../root.css");
 .body_body{
-    flex-basis: 78%;
-    min-width: 500px;
+    width: 100%;
     min-height: 800px;
     display: flex;
     flex-direction: column;
@@ -10,11 +9,11 @@
 .body_body .first_sec{
     width: 100%;
     display: flex;
-    height: 300px;
+    min-height: 300px;
 }
 section .descont{
     height: 300px;
-    width: 550px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +34,6 @@ section .descont{
 section .descont >div{
     width: 95%;
     height: 90%;
-    min-width: 360px;
     position: relative;
     display: flex;
     align-items: center;
@@ -181,7 +179,7 @@ section .descont2 >div button{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 250px;
+    min-height: 250px;
 }
 .most_buyder .img_desc{
     flex-grow: 1;
@@ -208,6 +206,7 @@ section .descont2 >div button{
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
+    width: 300px;
 }
 
 .first_div_avoluantion{
@@ -245,16 +244,17 @@ section .descont2 >div button{
 
 .numbers span{
     display: flex;
-    width: 60px;
-    height: 48px;
+    min-width: 60px;
+    min-height: 48px;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-left: 7px;
 }
 
 .numbers span p:first-child{
-    height: 25px;
-    width: 25px;
+    min-height: 25px;
+    min-width: 25px;
     border-radius: 100%;
     display: flex;
     align-items: center;
@@ -267,7 +267,7 @@ section .descont2 >div button{
 
 .numbers span p:last-child{
     font-weight: bold;
-    font-size: 12px;
+    font-size: 1.1rem;
 }
 
 
@@ -298,11 +298,32 @@ section .descont2 >div button{
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 20px solid var(--orange);
+    /* border: 20px solid var(--orange); */
     font-size: 20px;
     font-weight: bold;
     background-color: white;
+    position: relative;
 }
+.offer_2 div:first-child small{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 0px;
+    left: 0px;
+    border-radius: 100%;
+    
+    transition: all 2s;
+    outline: 0px solid  var(--orange);
+    animation: bola 3s 0s infinite linear;
+}
+@keyframes bola{
+    to{
+        outline: 20px solid  rgba(197, 60, 6, 0.342);;
+    }
+}
+
+
+
 .offer_2 div:last-child{
    flex-grow: 1;
    display: flex;
@@ -315,6 +336,7 @@ section .descont2 >div button{
     margin-top: 5px;
     color: white;
     text-shadow: 1px 1px 3px black;
+    font-size: 1.2rem;
 }
 .offer_2 div:last-child button{
     width: 140px;
@@ -340,7 +362,8 @@ section .descont2 >div button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    min-height: 40px;
+    flex-wrap: wrap;
 }
 .itens_to_salls .itens_exercicios{
     height: 35px;
@@ -350,6 +373,15 @@ section .descont2 >div button{
     justify-content: center;
     background-color: rgb(3, 3, 41);
     color: white;
+}
+.itens_to_salls_first_div ol{
+    min-width: 50%;
+    font-size: 1.1rem;
+    justify-content: end;
+    display: flex;
+}
+.itens_to_salls_first_div ol a{
+    font-size: 1rem;
 }
 .itens_to_salls >div ol{
     display: flex;
@@ -397,7 +429,7 @@ section .descont2 >div button{
     padding: 10px 0px;
 }
 .list_itens ol li{
-    height: 200px;
+    min-height: 200px;
     width: 200px;
     display: flex;
     flex-direction: column;

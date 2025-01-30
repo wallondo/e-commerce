@@ -75,7 +75,7 @@ export default function Header(){
                             <img onClick={up} className="roda_up" src="/img/up.png" alt="" style={{cursor:"pointer"}}/>
                         </span>
                       
-                        <span >
+                        <span className="sacola_header">
                                 <span className="sacola">
                             <Link to={"/buy/529ssfdssfsff85009"}>
                                     <img src="/img/sacola.png" alt="" style={{cursor:"pointer"}}/>

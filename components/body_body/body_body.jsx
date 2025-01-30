@@ -196,7 +196,8 @@ export default function Body_body(){
             </div>
             <div className="offer_2">
                     <div>
-                        <span>33% <br /> OFF</span>
+                    <span>33%   <br /> OFF <small></small></span>
+                        
                     </div>
                     <div>
                         <h3><Translate pt="Os melhores desktops gamers para ti!" en="The best gaming desktops for you!"/></h3>
@@ -206,7 +207,7 @@ export default function Body_body(){
             </div>
         </section>
         <section className="itens_to_salls">
-            <div>
+            <div className="itens_to_salls_first_div">
                 <div className="itens_exercicios"><h3><Translate pt="Mais compradas" en="Most purchased"/></h3></div>
                 <ol>
                     <li><a href="#all" onClick={()=>{produto(null)}}> <Translate pt="Todos" en="all"/></a></li>
