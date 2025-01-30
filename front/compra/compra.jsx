@@ -95,7 +95,7 @@ export default function Compra(){
     return(
         <section className="compra">
         
-             <div className="up">
+             <div className="up up_cpmpra">
                 <div>
                     {lang=="pt"? <p><span>Bem-vindo! </span> Transforme sua casa com móveis de qualidade e ofertas especiais!</p>:
                         <p> <span> Welcome! </span> Transform your home with quality furniture and special offers! </p>}
@@ -113,7 +113,7 @@ export default function Compra(){
                     </select>
                 </div>
             </div>
-             <div className="header">
+             <div className="header header_compra">
                 <div className="first_div">
                     <div className="first_div_icon">
                         <Link to={"/"}>
@@ -123,7 +123,7 @@ export default function Compra(){
                             </span>
                         </Link>
                     </div>
-                    <div className="promotions">
+                    <div className="promotions promotions_compra">
                         <ol>
                             <li style={{color:"rgb(245, 116, 116)",fontSize:"12px"}}>
                                 <Translate pt="Outras promoções : " en="Other promotions : "/>  

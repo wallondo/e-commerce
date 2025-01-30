@@ -8,10 +8,21 @@
     position: relative;
     transition: all 1s;
 }
-
+.up_cpmpra{
+    height: 40px ;
+}
+.header_compra{
+    min-height: 150px;
+}
+.promotions_compra ol{
+    width: 100%;
+}
+.promotions_compra ol li{
+    flex-grow: 1 !important;
+}
 .compra .produtos{
     height: 100%;
-    max-height: 600px;
+    max-height: 100vh;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +108,7 @@
     overflow-y: auto;
 }
 .produtos ol li{
-    height: 200px;
+    min-height: 200px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -133,6 +144,7 @@
 
 .show{
     right: -101% !important;
+    display: none;
 }
 .serch_car{
     width: 100%;
@@ -154,6 +166,28 @@
     background-size: cover;
     font-weight: bold;
     text-shadow: 1px 1px 1px white;
+}
+
+/* ======================================================================= */
+
+@media screen  and (max-width:650px){
+    .header_compra {
+        min-height: 310px;
+
+    }
+    .up_cpmpra{
+        min-height: 50px !important;
+    }
+    .first_div{
+        flex-direction: column !important;
+        align-items: start !important;
+    }
+    .first_div ol{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .header .first_div {
+    }
 }
 
 

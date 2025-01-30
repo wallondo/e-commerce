@@ -7,26 +7,24 @@
 }
 
 .corpo_buy{
-    height: 500px;
+    height: 100vh;
     width: 90%;
     position: relative;
-    overflow-x: hidden;
 }
 
 .promotion_itens{
     overflow-y: auto;
-    height: 500px;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
     padding: 20px 0px;
 
 }
 
 .promotion_itens li{
-    height: 200px;
+    min-height: 200px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -103,4 +101,30 @@
 .corpo_buy ol li small img{
     width: 10px;
     height: 10px;
+}
+
+
+
+
+/* =========================================== */
+
+@media screen and (max-width:650px){
+    .header_oferta{
+        min-height: 300px;
+    }
+    .others_secund_div_offer{
+        min-height: 80px;
+    }
+    .secund_div_offer select option{
+        font-size: 12px !important;
+        width: 100px !important;
+    }
+    .carrinho_tela{
+        width: 90% !important;
+    }
+    .corpo_buy{
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
 }

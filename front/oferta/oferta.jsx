@@ -123,7 +123,7 @@ export default function Oferta(){
                             </select>
                         </div>
             </div>
-            <div className="header">
+            <div className="header header_oferta">
                     <div className="first_div">
                         <div className="first_div_icon first_div_icon_offer">
                             <Link to={"/"}>
@@ -164,7 +164,7 @@ export default function Oferta(){
                             </span>
                         </div>
                     </div>
-                    <div className="secund_div">
+                    <div className="secund_div secund_div_offer">
                         <div>
                                 <div className="categoris">
                                 <ol>
@@ -189,19 +189,17 @@ export default function Oferta(){
                                 <img src="/img/lupa.png" alt="" />
                             </div>
                         </div>
-                        <div className="others_secund_div">
+                        <div className="others_secund_div others_secund_div_offer">
                                 <span className="up_span">
                                     <img src="/img/up.png" onClick={up} className="roda_up" alt="" style={{cursor:"pointer"}}/>
                                 </span>
-                               
                                 <span >
                                     <span className="sacola">
                                         <img src="/img/offer1.png" onClick={()=>{tela_offer()}} alt="" style={{cursor:"pointer"}}/>
                                         <small className="count">{mypromotion_car.length}</small>
                                     </span>
                                 <small> <Translate pt="Suas ofertas com desconto : " en="Your discounted offers. : "/> <span style={{color:"red"}}> -3039.80.00.kz</span> <br /> <Translate pt="por cada oferta" en={"Per offer."} /></small>
-                                </span>
-                                    
+                                </span>   
                         </div>
                     </div>
             </div>
