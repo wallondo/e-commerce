@@ -94,8 +94,8 @@ li{
     align-items: center;
 }
 .categoris{
-    width: 180px;
-    height: 30px;
+    width: 250px;
+    height: 35px;
     color: white;
     font-weight: 500;
     background-color: var(--orange);

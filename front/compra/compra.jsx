@@ -191,7 +191,7 @@ export default function Compra(){
                                     <small className="count">{Dads.carrinho.length}</small>
                                 </span>
                                 
-                                <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -2390.00.kz</span></small>
+                                <small className="smal"> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -2390.00.kz</span></small>
                             </span>
                     </div>
                 </div>

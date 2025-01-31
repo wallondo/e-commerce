@@ -21,7 +21,7 @@ export default function Header(){
                     <Link to={"/"}>
                         <span>
                             <img src="/img/sacola.png" alt="" />
-                            <small> {lang=="pt"?"Seu mercado online":"Your online marketplace"}</small>
+                            <small className="smal"> {lang=="pt"?"Seu mercado online":"Your online marketplace"}</small>
                         </span>
                     </Link>
                 </div>
@@ -83,7 +83,7 @@ export default function Header(){
                                     <small className="count">{Dads.carrinho.length}</small>
                                 </span>
                             
-                            <small> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -1030.9.00.kz </span></small>
+                            <small className="smal"> <Translate pt="seu carrinho : " en="Your cart : "/> <span style={{color:"red"}}> -1030.9.00.kz </span></small>
                         </span>
                 </div>
             </div>

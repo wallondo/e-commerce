@@ -1,10 +1,9 @@
 p,select,option,li{
-    font-size: 1.2rem;
+    font-size: 16px;
 }
 a{
     text-decoration: none;
     color: white;
-    font-size: 16px;
 }
 *{
     border: none;
@@ -16,6 +15,7 @@ li{
 }
 button{
     cursor: pointer;
+    font-size: 1.1rem;
 }
 .add{
     width: 140px;
@@ -30,4 +30,11 @@ button{
     width: 28px;
     height: 28px;
 }
+.smal{
+    padding: 2px 0px;
+}
+.promotions ol{
+    font-size: 1.1rem;
+}
+
 

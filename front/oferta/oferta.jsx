@@ -198,7 +198,7 @@ export default function Oferta(){
                                         <img src="/img/offer1.png" onClick={()=>{tela_offer()}} alt="" style={{cursor:"pointer"}}/>
                                         <small className="count">{mypromotion_car.length}</small>
                                     </span>
-                                <small> <Translate pt="Suas ofertas com desconto : " en="Your discounted offers. : "/> <span style={{color:"red"}}> -3039.80.00.kz</span> <br /> <Translate pt="por cada oferta" en={"Per offer."} /></small>
+                                <small className="smal"> <Translate pt="Suas ofertas com desconto : " en="Your discounted offers. : "/> <span style={{color:"red"}}> -3039.80.00.kz</span> <br /> <Translate pt="por cada oferta" en={"Per offer."} /></small>
                                 </span>   
                         </div>
                     </div>
