@@ -3,6 +3,7 @@
     width: 100%;
     min-height: 800px;
     display: flex;
+    /* overflow-x: hidden; */
     flex-direction: column;
 }
 
@@ -187,6 +188,7 @@ section .descont2 >div button{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .most_buyder > div .img{
