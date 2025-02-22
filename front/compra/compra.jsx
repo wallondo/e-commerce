@@ -92,9 +92,27 @@ export default function Compra(){
     const up = (params) => {
         alert("Seu Produtos Já Estão Atualizados")
     }
+    const esvaziar = (params)=>{
+        console.log(Dads)
+        Dads.setCarrinho([])
+        tela_car()
+    }
+    const Finalizar_Compra = ()=>{
+        if(Dads.carrinho.length<1){
+            alert("Carrinho Vazio")
+            return false;
+        }
+        document.getElementById("form_finalizar").classList.toggle("show")
+    }
+    const canselar_Compra =()=>{
+        document.getElementById("form_finalizar").classList.toggle("show")
+    }
+    const concluir_Compra = ()=>{
+        alert("Pedido enviado")
+    }
     return(
         <section className="compra">
-        
+              
              <div className="up up_cpmpra">
                 <div>
                     {lang=="pt"? <p><span>Bem-vindo! </span> Transforme sua casa com móveis de qualidade e ofertas especiais!</p>:
@@ -197,6 +215,49 @@ export default function Compra(){
                 </div>
             </div>
             <section className="produtos">
+                <form action="" method="post" className="form_finalizar show " id="form_finalizar">
+                    <div className="form_icon">
+                        <Link>
+                            <img src="/img/sacola.png" alt="" />
+                            Seu mercado online
+                        </Link>
+                    </div>
+                    <h3>Preencha todos os Dados</h3>
+                    <span>
+                        <div>
+                            <label htmlFor="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Primeiro e Último : " required />
+                            <label htmlFor="nome">Nome (Representante)</label>
+                            <input type="text" name="nome" id="nome" placeholder="Segunda opção: " required />
+                        </div>
+                        <div>
+                            <label htmlFor="nome">Cellular (1)</label>
+                            <input type="number" name="cell" id="cell" required/>
+                            <label htmlFor="nome">Cellular (2)</label>
+                            <input type="number" name="cell" id="cell" required/>
+                        </div>
+                    </span>
+                    <span>
+                        <div>
+                            <h4>Metodo de pagamento</h4>
+                            <select name="pagamento" id="pagamento" className="pagamento">
+                                <option value="presencial">Presencial</option>
+                                <option value="transferencia">Transferencia</option>
+                                <option value="deposito">Deposito</option>
+                            </select>
+                        </div>
+                    </span>
+                    <span>
+                        <div>
+                            <h4>Localização exata</h4>
+                            <textarea name="gps" id="gps" className="gps" required></textarea>
+                        </div>
+                    </span>
+                    <span className="form_opt">
+                        <button onClick={canselar_Compra}>Canselar</button>
+                        <button  onClick={concluir_Compra}>Comcluir</button>
+                    </span>
+                </form>
                 <section className="carrinho_tela show" id="tela_car_id">
                         <div className="top_car">
                             <div className="icon_car">
@@ -240,7 +301,11 @@ export default function Compra(){
                                 )
                                 }
                         </ol>
-                </section>
+                        <div className="op_car">
+                                <button onClick={esvaziar}>Esvaziar carrinho</button>
+                                <button onClick={Finalizar_Compra}>Finalizar compra</button>
+                        </div>
+                    </section>
                     <ol>
                         {
                             products.map((pro,pos)=>(

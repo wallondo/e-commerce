@@ -103,6 +103,26 @@ export default function Oferta(){
         setMypromotion_car2(text)
     }
 
+    const esvaziar = (params)=>{
+        console.log(Dads)
+        setMypromotion_car2([])
+        tela_car()
+    }
+    const Finalizar_Compra = ()=>{
+        if(mypromotion_car2.length<1){
+            alert("Ofertas Vazio")
+            return false;
+        }
+        document.getElementById("form_finalizar").classList.toggle("show")
+    }
+    const canselar_Compra =()=>{
+        document.getElementById("form_finalizar").classList.toggle("show")
+    }
+    const concluir_Compra = ()=>{
+        alert("Pedido enviado")
+    }
+
+
     return(
         <section className="oferta">
            <div className="up">
@@ -204,49 +224,96 @@ export default function Oferta(){
                     </div>
             </div>
             <section className="corpo_buy">
-                   <section className="carrinho_tela show" id="tela_offer_id">
-                                        <div className="top_car">
-                                            <div className="icon_car">
-                                                <div>
-                                                    <Link to={"/"}>
-                                                        <img src="/img/sacola.png" alt="" />
-                                                    </Link>
-                                                    <small>Seu mercado online</small>
-                                                </div>
-                                                    <h3>Seu carrinho de compras</h3>
-                                                <div>
-                                                    <img src="/img/car.png" alt="" />
-                                                </div>
-                                            </div>
-                                            <div className="serch_car">
-                                                <input type="text" onChange={(evt)=>{pesquisa_offer(evt.target.value)}} placeholder="Pesquisar as Ofertas : " />
-                                                <div className="search_icon">
-                                                    <img src="/img/lupa.png" alt="" />
-                                                </div>
-                                            </div>
+                    <form action="" method="post" className="form_finalizar show " id="form_finalizar">
+                                        <div className="form_icon">
+                                            <Link>
+                                                <img src="/img/sacola.png" alt="" />
+                                                Seu mercado online
+                                            </Link>
                                         </div>
-                                        <ol className="list_cars">
-                                                {
-                                                    (mypromotion_car2.length<1?(<h2 className="vazio">Sem Ofertas Aproveitadas</h2>):
-                                                    mypromotion_car2.map((pro,pos)=>(
-                                                        <li key={pos}>
-                                                            <div className="img_product">
-                                                            <img src={pro.img} alt="" />
-                                                            </div>
-                                                            <h4>Preço : <span>{pro.preco}</span>.00kz</h4>
-                                                            <h4>Total : <span>{pro.preco*pro.quant}</span>.00kz</h4>
-                                                            <p>{pro.nome}</p>
-                                                            <small>Avaliação : {pro.avaliacao}</small>
-                                                            <p>Quantidade : {pro.quant}</p>
-                                                            <div className="bt_car">
-                                                                <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="mais" en="more" /></button>
-                                                                <button className="add" onClick={()=>{menos(pro.id)}}><Translate pt="menos" en="less" /></button>
-                                                            </div>
-                                                        </li>
-                                                    ))
-                                                )
-                                                }
-                                        </ol>
+                                        <h3>Preencha todos os Dados</h3>
+                                        <span>
+                                            <div>
+                                                <label htmlFor="nome">Nome</label>
+                                                <input type="text" name="nome" id="nome" placeholder="Primeiro e Último : " required />
+                                                <label htmlFor="nome">Nome (Representante)</label>
+                                                <input type="text" name="nome" id="nome" placeholder="Segunda opção: " required />
+                                            </div>
+                                            <div>
+                                                <label htmlFor="nome">Cellular (1)</label>
+                                                <input type="number" name="cell" id="cell" required/>
+                                                <label htmlFor="nome">Cellular (2)</label>
+                                                <input type="number" name="cell" id="cell" required/>
+                                            </div>
+                                        </span>
+                                        <span>
+                                            <div>
+                                                <h4>Metodo de pagamento</h4>
+                                                <select name="pagamento" id="pagamento" className="pagamento">
+                                                    <option value="presencial">Presencial</option>
+                                                    <option value="transferencia">Transferencia</option>
+                                                    <option value="deposito">Deposito</option>
+                                                </select>
+                                            </div>
+                                        </span>
+                                        <span>
+                                            <div>
+                                                <h4>Localização exata</h4>
+                                                <textarea name="gps" id="gps" className="gps" required></textarea>
+                                            </div>
+                                        </span>
+                                        <span className="form_opt">
+                                            <button onClick={canselar_Compra}>Canselar</button>
+                                            <button  onClick={concluir_Compra}>Comcluir</button>
+                                        </span>
+                    </form>
+                   <section className="carrinho_tela show" id="tela_offer_id">
+                        <div className="top_car">
+                            <div className="icon_car">
+                                <div>
+                                    <Link to={"/"}>
+                                        <img src="/img/sacola.png" alt="" />
+                                    </Link>
+                                    <small>Seu mercado online</small>
+                                </div>
+                                    <h3>Seu carrinho de compras</h3>
+                                <div>
+                                    <img src="/img/car.png" alt="" />
+                                </div>
+                            </div>
+                            <div className="serch_car">
+                                <input type="text" onChange={(evt)=>{pesquisa_offer(evt.target.value)}} placeholder="Pesquisar as Ofertas : " />
+                                <div className="search_icon">
+                                    <img src="/img/lupa.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <ol className="list_cars">
+                                {
+                                    (mypromotion_car2.length<1?(<h2 className="vazio">Sem Ofertas Aproveitadas</h2>):
+                                    mypromotion_car2.map((pro,pos)=>(
+                                        <li key={pos}>
+                                            <div className="img_product">
+                                            <img src={pro.img} alt="" />
+                                            </div>
+                                            <h4>Preço : <span>{pro.preco}</span>.00kz</h4>
+                                            <h4>Total : <span>{pro.preco*pro.quant}</span>.00kz</h4>
+                                            <p>{pro.nome}</p>
+                                            <small>Avaliação : {pro.avaliacao}</small>
+                                            <p>Quantidade : {pro.quant}</p>
+                                            <div className="bt_car">
+                                                <button className="add" onClick={()=>{adicionar(pro.id)}}><Translate pt="mais" en="more" /></button>
+                                                <button className="add" onClick={()=>{menos(pro.id)}}><Translate pt="menos" en="less" /></button>
+                                            </div>
+                                        </li>
+                                    ))
+                                )
+                                }
+                        </ol>
+                        <div className="op_car form_opt">
+                            <button onClick={esvaziar}>Esvaziar carrinho</button>
+                            <button onClick={Finalizar_Compra}>Finalizar compra</button>
+                        </div>
                     </section>
                     <ol className="promotion_itens">
                             {

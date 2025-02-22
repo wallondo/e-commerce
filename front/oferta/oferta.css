@@ -97,13 +97,18 @@
 .corpo_buy ol li >*{
     font-weight: 700;
 }
-
+.carrinho_tela{
+    justify-content: space-between;
+}
 .corpo_buy ol li small img{
     width: 10px;
     height: 10px;
 }
 
-
+.form_opt_offer{
+    position: absolute;
+    bottom: 0px;
+}
 
 
 /* =========================================== */
@@ -119,7 +124,9 @@
         font-size: 12px !important;
         width: 100px !important;
     }
-    .carrinho_tela{
+    ..carrinho_tela{
+        justify-content: space-between;
+    }{
         width: 90% !important;
     }
     .corpo_buy{
