@@ -124,9 +124,7 @@
         font-size: 12px !important;
         width: 100px !important;
     }
-    ..carrinho_tela{
-        justify-content: space-between;
-    }{
+    .carrinho_tela{
         width: 90% !important;
     }
     .corpo_buy{
