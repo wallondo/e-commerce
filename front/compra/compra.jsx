@@ -125,6 +125,11 @@ export default function Compra(){
         ce1.current.value="";
         ce2.current.value="";
         tex.current.value="";
+        setNome1("")
+        setNome2("")
+        setCell1("")
+        setCell2("")
+        setTexto("")
     }
     const car_teste = ()=>{
         if(nome1==""||nome2==""||cell1==""||cell2==""||metodo==""||texto==""){

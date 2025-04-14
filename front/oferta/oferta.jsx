@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "../../components/header/header";
 import "./oferta.css";
 import { Link, NavLink } from "react-router-dom";
@@ -13,7 +13,13 @@ export default function Oferta(){
     const [mypromotion_car,setMypromotion_car] = useState([])
     const [mypromotion_car2,setMypromotion_car2] = useState(mypromotion_car)
     const [mypromotion_car2_up,setMypromotion_car2_up] = useState(mypromotion_car)
-    
+    const [nome1,setNome1] = useState("")
+    const [nome2,setNome2] = useState("")
+    const [cell1,setCell1] = useState("")
+    const [cell2,setCell2] = useState("")
+    const [metodo,SetMotodo] = useState("presencial");
+    const [texto,setTexto] = useState("");
+    // sacola
     const [tipo,setTipo] = useState("all")
 
     const menos = (params) =>{
@@ -102,11 +108,12 @@ export default function Oferta(){
 
         setMypromotion_car2(text)
     }
-
+    const tela_car = ()=>{
+        document.getElementById("tela_offer_id").classList.toggle("show")
+    }
     const esvaziar = (params)=>{
-        console.log(Dads)
-        setMypromotion_car2([])
-        tela_car()
+        setMypromotion_car([])
+         tela_car()
     }
     const Finalizar_Compra = ()=>{
         if(mypromotion_car2.length<1){
@@ -115,13 +122,50 @@ export default function Oferta(){
         }
         document.getElementById("form_finalizar").classList.toggle("show")
     }
-    const canselar_Compra =()=>{
+    const canselar_Compra =(evt)=>{
         document.getElementById("form_finalizar").classList.toggle("show")
     }
-    const concluir_Compra = ()=>{
-        alert("Pedido enviado")
-    }
 
+        const no1 = useRef(null);
+        const no2 = useRef(null)
+        const ce1 = useRef(null)
+        const ce2 = useRef(null)
+        const met = useRef(null)
+        const tex = useRef(null)
+    
+        const limpa_input = ()=>{
+            no1.current.value="";
+            no2.current.value="";
+            ce1.current.value="";
+            ce2.current.value="";
+            tex.current.value="";
+            setNome1("")
+            setNome2("")
+            setCell1("")
+            setCell2("")
+            setTexto("")
+        }
+        const car_teste = ()=>{
+            if(nome1==""||nome2==""||cell1==""||cell2==""||metodo==""||texto==""){
+               return true;
+            }else{
+                return false;
+            }
+    
+    
+        }
+        const concluir_Compra = (evt)=>{
+            evt.preventDefault();
+            console.log(nome1,nome2,cell1,cell2,metodo,texto)
+            if(car_teste()){
+                alert("Preencha todos os campos devidamente");
+            }else{
+                esvaziar();
+                alert("Pedido enviado com sucesso")
+                canselar_Compra();
+                limpa_input()
+            }
+        }
 
     return(
         <section className="oferta">
@@ -224,49 +268,49 @@ export default function Oferta(){
                     </div>
             </div>
             <section className="corpo_buy">
-                    <form action="" method="post" className="form_finalizar show " id="form_finalizar">
-                                        <div className="form_icon">
-                                            <Link>
-                                                <img src="/img/sacola.png" alt="" />
-                                                Seu mercado online
-                                            </Link>
-                                        </div>
-                                        <h3>Preencha todos os Dados</h3>
-                                        <span>
-                                            <div>
-                                                <label htmlFor="nome">Nome</label>
-                                                <input type="text" name="nome" id="nome" placeholder="Primeiro e Último : " required />
-                                                <label htmlFor="nome">Nome (Representante)</label>
-                                                <input type="text" name="nome" id="nome" placeholder="Segunda opção: " required />
-                                            </div>
-                                            <div>
-                                                <label htmlFor="nome">Cellular (1)</label>
-                                                <input type="number" name="cell" id="cell" required/>
-                                                <label htmlFor="nome">Cellular (2)</label>
-                                                <input type="number" name="cell" id="cell" required/>
-                                            </div>
-                                        </span>
-                                        <span>
-                                            <div>
-                                                <h4>Metodo de pagamento</h4>
-                                                <select name="pagamento" id="pagamento" className="pagamento">
-                                                    <option value="presencial">Presencial</option>
-                                                    <option value="transferencia">Transferencia</option>
-                                                    <option value="deposito">Deposito</option>
-                                                </select>
-                                            </div>
-                                        </span>
-                                        <span>
-                                            <div>
-                                                <h4>Localização exata</h4>
-                                                <textarea name="gps" id="gps" className="gps" required></textarea>
-                                            </div>
-                                        </span>
-                                        <span className="form_opt">
-                                            <button onClick={canselar_Compra}>Canselar</button>
-                                            <button  onClick={concluir_Compra}>Comcluir</button>
-                                        </span>
-                    </form>
+                     <form action="" method="post" className="form_finalizar show " id="form_finalizar">
+                                      <div className="form_icon">
+                                          <Link>
+                                              <img src="/img/sacola.png" alt="" />
+                                              Seu mercado online
+                                          </Link>
+                                      </div>
+                                      <h3>Preencha todos os Dados</h3>
+                                      <span>
+                                          <div>
+                                              <label htmlFor="nome">Nome</label>
+                                              <input type="text" ref={no1} onChange={(evt)=>{setNome1(evt.target.value)}} name="nome" id="nome" placeholder="Primeiro e Último : " required />
+                                              <label htmlFor="nome">Nome (Representante)</label>
+                                              <input type="text" ref={no2} onChange={(evt)=>{setNome2(evt.target.value)}}  name="nome" id="nome" placeholder="Segunda opção: " required />
+                                          </div>
+                                          <div>
+                                              <label htmlFor="nome">Cellular (1)</label>
+                                              <input type="number" ref={ce1} onChange={(evt)=>{setCell1(evt.target.value)}}  name="cell" id="cell" required/>
+                                              <label htmlFor="nome">Cellular (2)</label>
+                                              <input type="number" ref={ce2} onChange={(evt)=>{setCell2(evt.target.value)}}  name="cell" id="cell" required/>
+                                          </div>
+                                      </span>
+                                      <span>
+                                          <div>
+                                              <h4>Metodo de pagamento</h4>
+                                              <select name="pagamento" id="pagamento" className="pagamento" onChange={(value)=>{SetMotodo(value.target.value)}}>
+                                                  <option value="presencial">Presencial</option>
+                                                  <option value="transferencia">Transferencia</option>
+                                                  <option value="deposito">Deposito</option>
+                                              </select>
+                                          </div>
+                                      </span>
+                                      <span>
+                                          <div>
+                                              <h4>Localização exata</h4>
+                                              <textarea ref={tex} name="gps" id="gps" className="gps" onChange={(evt)=>{setTexto(evt.target.value)}} ></textarea>
+                                          </div>
+                                      </span>
+                                      <span className="form_opt">
+                                          <button onClick={canselar_Compra}>Canselar</button>
+                                          <button  onClick={concluir_Compra}>Comcluir</button>
+                                      </span>
+                                  </form>
                    <section className="carrinho_tela show" id="tela_offer_id">
                         <div className="top_car">
                             <div className="icon_car">
