@@ -287,6 +287,9 @@ export default function Compra(){
                                 <option value="transferencia">Transferencia</option>
                                 <option value="deposito">Deposito</option>
                             </select>
+                            {
+                                metodo=="presencial"?"":<p>IBAN : 009890000098273645381</p> 
+                            }
                         </div>
                     </span>
                     <span>
