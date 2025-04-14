@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "../../components/header/header";
 import "./compra.css";
 import Translate from "../../src/translate";
@@ -13,6 +13,12 @@ export default function Compra(){
     const [all_products,setAll_products] = useState(Dads.mobilias)
     const [products,setProduts] = useState(all_products)
     const [categorias_all,setCategorias_all] = useState("all") 
+    const [nome1,setNome1] = useState("")
+    const [nome2,setNome2] = useState("")
+    const [cell1,setCell1] = useState("")
+    const [cell2,setCell2] = useState("")
+    const [metodo,SetMotodo] = useState("presencial");
+    const [texto,setTexto] = useState("");
 
     useEffect(()=>{
         setCars2(cars)
@@ -93,7 +99,6 @@ export default function Compra(){
         alert("Seu Produtos Já Estão Atualizados")
     }
     const esvaziar = (params)=>{
-        console.log(Dads)
         Dads.setCarrinho([])
         tela_car()
     }
@@ -107,8 +112,40 @@ export default function Compra(){
     const canselar_Compra =()=>{
         document.getElementById("form_finalizar").classList.toggle("show")
     }
-    const concluir_Compra = ()=>{
-        alert("Pedido enviado")
+    const no1 = useRef(null);
+    const no2 = useRef(null)
+    const ce1 = useRef(null)
+    const ce2 = useRef(null)
+    const met = useRef(null)
+    const tex = useRef(null)
+
+    const limpa_input = ()=>{
+        no1.current.value="";
+        no2.current.value="";
+        ce1.current.value="";
+        ce2.current.value="";
+        tex.current.value="";
+    }
+    const car_teste = ()=>{
+        if(nome1==""||nome2==""||cell1==""||cell2==""||metodo==""||texto==""){
+           return true;
+        }else{
+            return false;
+        }
+
+
+    }
+    const concluir_Compra = (evt)=>{
+        evt.preventDefault();
+        console.log(nome1,nome2,cell1,cell2,metodo,texto)
+        if(car_teste()){
+            alert("Preencha todos os campos devidamente");
+        }else{
+            esvaziar();
+            alert("Pedido enviado com sucesso")
+            canselar_Compra();
+            limpa_input()
+        }
     }
     return(
         <section className="compra">
@@ -226,21 +263,21 @@ export default function Compra(){
                     <span>
                         <div>
                             <label htmlFor="nome">Nome</label>
-                            <input type="text" name="nome" id="nome" placeholder="Primeiro e Último : " required />
+                            <input type="text" ref={no1} onChange={(evt)=>{setNome1(evt.target.value)}} name="nome" id="nome" placeholder="Primeiro e Último : " required />
                             <label htmlFor="nome">Nome (Representante)</label>
-                            <input type="text" name="nome" id="nome" placeholder="Segunda opção: " required />
+                            <input type="text" ref={no2} onChange={(evt)=>{setNome2(evt.target.value)}}  name="nome" id="nome" placeholder="Segunda opção: " required />
                         </div>
                         <div>
                             <label htmlFor="nome">Cellular (1)</label>
-                            <input type="number" name="cell" id="cell" required/>
+                            <input type="number" ref={ce1} onChange={(evt)=>{setCell1(evt.target.value)}}  name="cell" id="cell" required/>
                             <label htmlFor="nome">Cellular (2)</label>
-                            <input type="number" name="cell" id="cell" required/>
+                            <input type="number" ref={ce2} onChange={(evt)=>{setCell2(evt.target.value)}}  name="cell" id="cell" required/>
                         </div>
                     </span>
                     <span>
                         <div>
                             <h4>Metodo de pagamento</h4>
-                            <select name="pagamento" id="pagamento" className="pagamento">
+                            <select name="pagamento" id="pagamento" className="pagamento" onChange={(value)=>{SetMotodo(value.target.value)}}>
                                 <option value="presencial">Presencial</option>
                                 <option value="transferencia">Transferencia</option>
                                 <option value="deposito">Deposito</option>
@@ -250,7 +287,7 @@ export default function Compra(){
                     <span>
                         <div>
                             <h4>Localização exata</h4>
-                            <textarea name="gps" id="gps" className="gps" required></textarea>
+                            <textarea ref={tex} name="gps" id="gps" className="gps" onChange={(evt)=>{setTexto(evt.target.value)}} ></textarea>
                         </div>
                     </span>
                     <span className="form_opt">
